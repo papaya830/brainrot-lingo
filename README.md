@@ -1,2 +1,6 @@
 # fave-bus
-stormhacks fall 2024
+submission for stormhacks 2024 
+
+category: learning, social goodness. 
+
+
