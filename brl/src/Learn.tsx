@@ -32,18 +32,48 @@ const Learn: React.FC = () => {
                     </ul>
                 </nav>
             </header>
-                    <ul>
-
-                        <li>
-                            <Link to="chapter1">Chapter 1</Link>
-                        </li>
-                        <li>
-                            <Link to="chapter2">Chapter 2</Link>
-                        </li>
-                        <li>
-                            <Link to="chapter3">Chapter 3</Link>
-                        </li>
-                    </ul>
+            {/* Card Container */}
+            <div className="card-container">
+                <div className="card">
+                    <div className="face face1">
+                        <div className="content">
+                            <h3>CHAPTER 1</h3>
+                        </div>
+                    </div>
+                    <div className="face face2">
+                        <div className="content">
+                            <p>An introduction to BrainRot.</p>
+                            <Link to="chapter1">Learn</Link>
+                        </div>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="face face1">
+                        <div className="content">
+                            <h3>CHAPTER 2</h3>
+                        </div>
+                    </div>
+                    <div className="face face2">
+                        <div className="content">
+                            <p>Learn More about BrainRot.</p>
+                            <Link to="chapter2">Learn</Link>
+                        </div>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="face face1">
+                        <div className="content">
+                            <h3>CHAPTER 3</h3>
+                        </div>
+                    </div>
+                    <div className="face face2">
+                        <div className="content">
+                            <p>Challenge yourself.</p>
+                            <Link to="chapter3">Learn</Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {/* This Outlet will render the content of the selected chapter */}
             <Outlet />
         </div>
