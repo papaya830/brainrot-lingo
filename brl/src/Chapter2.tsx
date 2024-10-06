@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
 import './QuizPage.css'; // Import your CSS file for styling
 
 // Sample brainrot terms and definitions
@@ -416,7 +417,27 @@ const Chapter2: React.FC = () => {
     }
   };
 
-  return (
+  return <div>
+    <header>
+        <nav>
+            {/* Logo on the left */}
+            <Link to="/">
+                <img src="/images/default-logo.png" alt="Logo" className="logo-img" />
+            </Link>
+            {/* Navigation links in the center */}
+            <ul>
+                <li>
+                <NavLink to="/" activeClassName="active">Home</NavLink>
+                </li>
+                <li>
+                <NavLink to="/learn" activeClassName="active">Learn</NavLink>
+                </li>
+                <li>
+                <NavLink to="/dictionary" activeClassName="active">Dictionary</NavLink>
+                </li>
+            </ul>
+        </nav>
+    </header>  
     <div className="quiz-container">
       <div className="terms-column">
         <h2>Terms</h2>
@@ -446,7 +467,7 @@ const Chapter2: React.FC = () => {
       {/* Show the game over message */}
       {gameOverMessage && <div className="game-over">{gameOverMessage}</div>}
     </div>
-  );
+  </div>
 };
 
 export default Chapter2;

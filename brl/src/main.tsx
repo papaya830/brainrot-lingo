@@ -20,21 +20,20 @@ const router = createBrowserRouter([
   {
     path: "/learn", // Add a route for Learn
     element: <Learn />,
-    children: [
-      {
-        path: "chapter1",
-        element: <Chapter1 />
-      },
-      {
-        path: "chapter2",
-        element: <Chapter2 />
-      },
-      {
-        path: "chapter3",
-        element: <Chapter3 />
-      },
-    ],
   },
+  {
+    path: "chapter1",
+    element: <Chapter1 />
+  },
+  {
+    path: "chapter2",
+    element: <Chapter2 />
+  },
+  {
+    path: "chapter3",
+    element: <Chapter3 />
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

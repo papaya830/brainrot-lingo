@@ -1,5 +1,6 @@
 // Chapter1.tsx
 import React, { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
 import Flashcard from './Flashcard'; // Ensure this path is correct
 import './chp1.css';
 
@@ -378,19 +379,39 @@ const Chapter1: React.FC = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % selectedFlashcards.length); // Cycle through selected flashcards
   };
 
-  return (
-    <div className="flashcard-container">
-      <h1>Learning Deck</h1>
-      {selectedFlashcards.length > 0 && (
-        <Flashcard
-          term={selectedFlashcards[currentIndex].term}
-          definition={selectedFlashcards[currentIndex].definition}
-          image={selectedFlashcards[currentIndex].image}
-        />
-      )}
-      <button onClick={handleNext}>Next Card</button>
-    </div>
-  );
+  return <div>
+            <header>
+              <nav>
+                  {/* Logo on the left */}
+                  <Link to="/">
+                      <img src="/images/default-logo.png" alt="Logo" className="logo-img" />
+                  </Link>
+                  {/* Navigation links in the center */}
+                  <ul>
+                      <li>
+                      <NavLink to="/" activeClassName="active">Home</NavLink>
+                      </li>
+                      <li>
+                      <NavLink to="/learn" activeClassName="active">Learn</NavLink>
+                      </li>
+                      <li>
+                      <NavLink to="/dictionary" activeClassName="active">Dictionary</NavLink>
+                      </li>
+                  </ul>
+              </nav>
+            </header>  
+            <div  className="flashcard-container">
+              <h1>Learning Deck</h1>
+              {selectedFlashcards.length > 0 && (
+                <Flashcard
+                  term={selectedFlashcards[currentIndex].term}
+                  definition={selectedFlashcards[currentIndex].definition}
+                  image={selectedFlashcards[currentIndex].image}
+                />
+              )}
+              <button onClick={handleNext}>Next Card</button>
+            </div>
+  </div>
 };
 
 export default Chapter1;
