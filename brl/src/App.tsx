@@ -27,6 +27,11 @@ const App: React.FC = () => {
           <h1 className="transition-t1">BrainRot Lingo</h1>
           <h2 className="transition-t2">Stay Trendy, Stay Connected!</h2>
         </div>
+        <img
+            src="public/images/home/dabbing-brain.png"
+            alt="dabbing-brain"
+            className="overlay-image"
+        />
       </main>
       </div>
     </>

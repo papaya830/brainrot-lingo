@@ -16,6 +16,28 @@
   position: relative; /* Position relative for absolute positioning */
 }
 
+.overlay-image {
+  position: absolute; /* Positioning to overlap */
+  top: 15%; /* Adjust as needed */
+  right: 2%; /* Adjust as needed */
+  width: 30%; /* Adjust the width as necessary */
+  z-index: 10; /* Ensure it appears above the background */
+  opacity: 1; /* Optional: adjust transparency */
+  animation: fadeIn 6s forwards;
+  animation-delay: 0s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start as invisible */
+    transform: translateY(20px); /* Optional: slight movement from below */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move back to original position */
+  }
+}
+
 /* Body Style */
 body {
   font-family: 'Roboto', 'Open Sans', 'Raleway', sans-serif;
@@ -71,23 +93,37 @@ main {
 
 /* Heading Styles */
 h1 {
-  font-size: 3.5rem; /* Font size for h1 */
-  margin: 20px 0; /* Margin above and below */
-  opacity: 0; /* Start with transparent for animation */
-  animation: fadeInRight 2.5s forwards; /* Apply animation */
+  font-size: 5rem;
+  margin: 20px 0;
+  opacity: 0;
+  animation: fadeInRight 2.5s forwards;
 }
 
 h2 {
-  font-size: 2.6rem; /* Font size for h2 */
-  margin: 10px 0; /* Margin above and below */
-  opacity: 0; /* Start with transparent for animation */
-  animation: fadeInRight 3s forwards; /* Apply animation */
+  font-size: 2.6rem;
+  margin: 5px 0;
+  opacity: 0;
+  font-style: italic;
+  font-weight: bold;
+  animation-delay: 2.5s;
+  animation: fadeinLeft 2.5s forwards;
 }
 
 /* Animation Keyframes */
 @keyframes fadeInRight {
   0% {
     transform: translateX(100%); /* Start from the right */
+    opacity: 0; /* Invisible */
+  }
+  100% {
+    transform: translateX(0); /* End at original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+@keyframes fadeinLeft {
+  0% {
+    transform: translateX(-100%); /* Start from the right */
     opacity: 0; /* Invisible */
   }
   100% {
