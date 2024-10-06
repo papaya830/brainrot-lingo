@@ -1,4 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Learn: React.FC = () => {
     const bgStyle = {
@@ -20,13 +21,13 @@ const Learn: React.FC = () => {
                     {/* Navigation links in the center */}
                     <ul>
                         <li>
-                        <Link to="/" activeClassName="active">Home</Link>
+                        <NavLink to="/" activeClassName="active">Home</NavLink>
                         </li>
                         <li>
-                        <Link to="/learn" activeClassName="active">Learn</Link>
+                        <NavLink to="/learn" activeClassName="active">Learn</NavLink>
                         </li>
                         <li>
-                        <Link to="/dictionary" activeClassName="active">Dictionary</Link>
+                        <NavLink to="/dictionary" activeClassName="active">Dictionary</NavLink>
                         </li>
                     </ul>
                 </nav>
