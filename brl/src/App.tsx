@@ -1,20 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Import Link
+import './App.css';
 
 const App: React.FC = () => {
   return (
     <>
+    <div className="background-image">
       <header>
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" activeClassName="active">Home</Link>
             </li>
             <li>
-              <Link to="/learn">Learn</Link>
+              <Link to="/learn" activeClassName="active">Learn</Link>
             </li>
             <li>
-              <Link to="/dictionary">Dictionary</Link>
+              <Link to="/dictionary" activeClassName="active">Dictionary</Link>
             </li>
           </ul>
         </nav>
@@ -22,9 +24,11 @@ const App: React.FC = () => {
       <main>
         {/* The content of the main app is rendered here. */}
         <div>
-          <h1>Welcome to the App!</h1>
+          <h1 className="transition-t1">BrainRot Lingo</h1>
+          <h2 className="transition-t2">Stay Trendy, Stay Connected!</h2>
         </div>
       </main>
+      </div>
     </>
   );
 };

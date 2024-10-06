@@ -1,0 +1,117 @@
+/* App.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background-image {
+  background-image: url("images/jh.jpg"); /* Path to your image */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  position: relative; /* Position relative for absolute positioning */
+}
+
+/* Body Style */
+body {
+  font-family: 'Roboto', 'Open Sans', 'Raleway', sans-serif;
+  background-color: #f4f4f4; /* Light gray background */
+  color: #333; /* Dark gray text color */
+}
+
+/* Header and Navbar Styles */
+header {
+  background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background for visibility */
+  padding: 2rem; /* Padding around the header */
+  position: relative; /* Ensure positioning context for z-index */
+  z-index: 10; /* Make sure the header is above the background */
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullets */
+  display: flex; /* Flexbox for horizontal alignment */
+  justify-content: center; /* Center the navigation items */
+}
+
+nav li {
+  margin: 0 15px; /* Space between items */
+}
+
+nav a {
+  color: white; /* White text color for links */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1.5rem; /* Slightly larger text */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav a:hover {
+  color: #ffd700; /* Change color on hover (gold) */
+}
+
+nav a.active {
+  font-weight: bold; /* Highlight the active link */
+  border-bottom: 2px solid #ffd700; /* Underline for active link */
+}
+
+/* Main Content Styles */
+main {
+  display: flex; /* Flexbox for main content */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center align items */
+  justify-content: center; /* Center vertically */
+  height: calc(100vh - 60px); /* Full height minus header height */
+  text-align: center; /* Center the text */
+  color: white; /* White text color for visibility */
+  z-index: 20; /* Ensure the text is above the background */
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 3.5rem; /* Font size for h1 */
+  margin: 20px 0; /* Margin above and below */
+  opacity: 0; /* Start with transparent for animation */
+  animation: fadeInRight 2.5s forwards; /* Apply animation */
+}
+
+h2 {
+  font-size: 2.6rem; /* Font size for h2 */
+  margin: 10px 0; /* Margin above and below */
+  opacity: 0; /* Start with transparent for animation */
+  animation: fadeInRight 3s forwards; /* Apply animation */
+}
+
+/* Animation Keyframes */
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(100%); /* Start from the right */
+    opacity: 0; /* Invisible */
+  }
+  100% {
+    transform: translateX(0); /* End at original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  nav li {
+    margin: 0 10px; /* Less space for mobile */
+  }
+
+  h1 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+}
+
+/* Delays for Transition Classes */
+.transition-t1 {
+  animation-delay: 0.65s; /* Delay for h1 */
+}
+
+.transition-t2 {
+  animation-delay: 0.65s; /* Delay for h2, can adjust this if needed */
+}
