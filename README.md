@@ -1,4 +1,4 @@
-# brainrot-lingo
+# BrainRot-Lingo
 Submission for Stormhacks 2024
 
 ## Category: Learning, Social Goodness. 
