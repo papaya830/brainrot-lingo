@@ -10,8 +10,8 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 def load_translations(file_path):
-    abs_path = os.path.abspath(file_path, 'r', encoding='utf-8') as file:
-    with open(abs_path, 'r') as file:
+    abs_path = os.path.abspath(file_path)
+    with open(abs_path, 'r', encoding='utf-8') as file:
         return json.load(file)
 
 def translate_to_brain_rot(user_message, translations):
