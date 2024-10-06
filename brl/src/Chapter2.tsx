@@ -372,6 +372,7 @@ const Chapter2: React.FC = () => {
   const [correctDefinitions, setCorrectDefinitions] = useState<string[]>([]); // Track correct definitions
   const [incorrectSelection, setIncorrectSelection] = useState<string | null>(null); // Track incorrect answer
   const [randomData, setRandomData] = useState<any[]>([]); // Random 5 terms/definitions
+  const [shuffledDefinitions, setShuffledDefinitions] = useState<any[]>([]); // Shuffled definitions
   const [correctCount, setCountCorrect] = useState<number>(0); // Track correct count
   const [incorrectCount, setIncorrectCount] = useState<number>(0); // Track incorrect count
   const [gameOverMessage, setGameOverMessage] = useState<string | null>(null); // Game over message
@@ -391,6 +392,7 @@ const Chapter2: React.FC = () => {
     // Shuffle and set new random data
     const shuffledData = shuffleArray(brainrotData).slice(0, numQuestions);
     setRandomData(shuffledData);
+    setShuffledDefinitions(shuffleArray(shuffledData.map(item => item.definition)));
   };
 
   const incrementCorrect = () => {
@@ -405,6 +407,7 @@ const Chapter2: React.FC = () => {
     // Shuffle and select 5 random terms/definitions when the component mounts
     const shuffledData = shuffleArray(brainrotData).slice(0, numQuestions);
     setRandomData(shuffledData);
+    setShuffledDefinitions(shuffleArray(shuffledData.map(item => item.definition))); // Shuffle only the definitions
   }, []);
 
   useEffect(() => {
@@ -439,32 +442,12 @@ const Chapter2: React.FC = () => {
       } else {
         setIncorrectSelection(definition); // Mark the incorrect selection
         incrementIncorrect();
-        setTimeout(() => setIncorrectSelection(null), 1100); // Remove red background after 1.5 seconds
+        setTimeout(() => setIncorrectSelection(null), 1500); // Remove red background after 1.5 seconds
       }
     }
   };
 
-  return <div>
-    <header>
-        <nav>
-            {/* Logo on the left */}
-            <Link to="/">
-              <img src="/images/new-logo.png" alt="Logo" className="logo-img" />
-            </Link>
-            {/* Navigation links in the center */}
-            <ul>
-                <li>
-                <NavLink to="/" activeClassName="active">Home</NavLink>
-                </li>
-                <li>
-                <NavLink to="/learn" activeClassName="active">Learn</NavLink>
-                </li>
-                <li>
-                <NavLink to="/dictionary" activeClassName="active">Dictionary</NavLink>
-                </li>
-            </ul>
-        </nav>
-    </header>  
+  return (
     <div className="quiz-container">
       <div className="terms-column">
         <h2>Terms</h2>
@@ -480,13 +463,13 @@ const Chapter2: React.FC = () => {
       </div>
       <div className="definitions-column">
         <h2>Definitions</h2>
-        {randomData.map((item, index) => (
+        {shuffledDefinitions.map((definition, index) => (
           <div 
             key={index} 
-            className={`quiz-box ${correctDefinitions.includes(item.definition) ? "correct" : ""} ${incorrectSelection === item.definition ? "incorrect" : ""}`} 
-            onClick={() => handleDefinitionClick(item.definition)}
+            className={`quiz-box ${correctDefinitions.includes(definition) ? "correct" : ""} ${incorrectSelection === definition ? "incorrect" : ""}`} 
+            onClick={() => handleDefinitionClick(definition)}
           >
-            {item.definition}
+            {definition}
           </div>
         ))}
       </div>
@@ -494,7 +477,7 @@ const Chapter2: React.FC = () => {
       {/* Show the game over message */}
       {gameOverMessage && <div className="game-over">{gameOverMessage}</div>}
     </div>
-  </div>
+  );
 };
 
 export default Chapter2;
