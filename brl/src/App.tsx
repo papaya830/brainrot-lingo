@@ -33,11 +33,18 @@ const App: React.FC = () => {
             <h2 className="transition-t2">Stay Trendy, Stay Connected!</h2>
             <div className="description-blob">
               <p>
-                Introducing our innovative platform, expertly designed for parents who want to stay in the loop with their children’s ever-evolving slang.
-                With our engaging resources, you’ll not only learn the latest lingo but also connect with your kids on a whole new level.
+                Introducing our <em>innovative</em> platform, expertly designed for parents who want to stay in the loop with their children’s ever-evolving slang.
+                With our <em>engaging</em> resources, you’ll not only learn the latest lingo but also connect with your kids on a whole new level.
                 Empower yourself with the words that shape their world, and watch as your conversations flourish! Stay relevant, stay connected, and join the fun today!
               </p>
             </div>
+
+            <div className="start-learning">
+              <Link to="/learn" className="learn-button">
+                Learn Now
+              </Link>
+            </div>
+
           </div>
           <img
             src="/images/home/dabbing-brain.png" // Adjusted path

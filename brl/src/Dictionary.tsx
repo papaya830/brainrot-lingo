@@ -7,7 +7,7 @@ import "./Dictionary.css"
 import "./App.css"
 
 const Dictionary: React.FC = () => {
-    
+
 
     return (
         <>
@@ -32,7 +32,7 @@ const Dictionary: React.FC = () => {
                         </ul>
                     </nav>
                 </header>
-    
+
                 <div className="button-placement">
                     {/* Dynamically Generate Dropdown Buttons from JSON */}
                     {data.map((item, index) => (
@@ -48,15 +48,14 @@ const Dictionary: React.FC = () => {
                         />
                     ))}
                 </div>
-    
+
                 <footer className="footer">
                     <p>© 2024 BrainRot Lingo. All rights reserved.</p>
                 </footer>
             </div>
         </>
     );
-    
+
   };
-  
+
   export default Dictionary;
-  

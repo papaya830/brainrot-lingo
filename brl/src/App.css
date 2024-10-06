@@ -44,7 +44,7 @@
 /* Overlay Image */
 .overlay-image {
   position: absolute; /* Positioning to overlap */
-  top: 18%; /* Adjust as needed */
+  top: 13%; /* Adjust as needed */
   right: 2%; /* Adjust as needed */
   width: 30%; /* Adjust the width as necessary */
   z-index: 10; /* Ensure it appears above the background */
@@ -360,3 +360,39 @@ h2 {
 .face.face2 .content a:hover {
   color: #ddc644; /* Yellow/green text on hover */
 }
+.learn-button {
+  display: inline-block; /* Allows for padding and margins */
+  background-color: #007bff; /* Button color */
+  color: white; /* Text color */
+  padding: 12px 24px; /* Padding around the text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1.5rem; /* Font size */
+  text-decoration: none; /* Remove underline for links */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+  opacity: 0; /* Start with the button invisible */
+  animation: fadeIn 0.5s forwards; /* Apply fade-in animation */
+  animation-delay: 2.6s; /* Delay before the button starts to fade in */
+}
+
+/* Define the fadeIn keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start lower */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+.learn-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.learn-button:active {
+  transform: translateY(1px); /* Slightly push down on click */
+}
+
