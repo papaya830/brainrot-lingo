@@ -64,7 +64,7 @@ const Dictionary: React.FC = () => {
 
       {/* Second Dropdown Button */}
       <DropdownButton
-        buttonText="Button 2"
+        buttonText="B"
         dropdownContent={
           <div>
             <p>Dropdown content for Button 2</p>
@@ -75,7 +75,7 @@ const Dictionary: React.FC = () => {
 
       {/* Third Dropdown Button */}
       <DropdownButton
-        buttonText="Button 3"
+        buttonText="C"
         dropdownContent={
           <div>
             <p>Dropdown content for Button 3</p>
@@ -87,7 +87,7 @@ const Dictionary: React.FC = () => {
 
       {/* Third Dropdown Button */}
       <DropdownButton
-        buttonText="Button 4"
+        buttonText="D"
         dropdownContent={
           <div>
             <p>Dropdown content for Button 4</p>
@@ -99,7 +99,7 @@ const Dictionary: React.FC = () => {
 
     {/* Fifth Dropdown Button */}
     <DropdownButton
-      buttonText="Button 5"
+      buttonText="E"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 5</p>
@@ -110,7 +110,7 @@ const Dictionary: React.FC = () => {
 
     {/* Sixth Dropdown Button */}
     <DropdownButton
-      buttonText="Button 6"
+      buttonText="F"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 6</p>
@@ -121,7 +121,7 @@ const Dictionary: React.FC = () => {
 
     {/* Seventh Dropdown Button */}
     <DropdownButton
-      buttonText="Button 7"
+      buttonText="G"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 7</p>
@@ -132,7 +132,7 @@ const Dictionary: React.FC = () => {
 
     {/* Eighth Dropdown Button */}
     <DropdownButton
-      buttonText="Button 8"
+      buttonText="H"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 8</p>
@@ -143,7 +143,7 @@ const Dictionary: React.FC = () => {
 
     {/* Ninth Dropdown Button */}
     <DropdownButton
-      buttonText="Button 9"
+      buttonText="I"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 9</p>
@@ -154,7 +154,7 @@ const Dictionary: React.FC = () => {
 
     {/* Tenth Dropdown Button */}
     <DropdownButton
-      buttonText="Button 10"
+      buttonText="J"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 10</p>
@@ -165,7 +165,7 @@ const Dictionary: React.FC = () => {
 
     {/* Eleventh Dropdown Button */}
     <DropdownButton
-      buttonText="Button 11"
+      buttonText="K"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 11</p>
@@ -176,7 +176,7 @@ const Dictionary: React.FC = () => {
 
     {/* Twelfth Dropdown Button */}
     <DropdownButton
-      buttonText="Button 12"
+      buttonText="L"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 12</p>
@@ -187,7 +187,7 @@ const Dictionary: React.FC = () => {
 
     {/* Thirteenth Dropdown Button */}
     <DropdownButton
-      buttonText="Button 13"
+      buttonText="M"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 13</p>
@@ -198,7 +198,7 @@ const Dictionary: React.FC = () => {
 
     {/* Fourteenth Dropdown Button */}
     <DropdownButton
-      buttonText="Button 14"
+      buttonText="N"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 14</p>
@@ -209,7 +209,7 @@ const Dictionary: React.FC = () => {
 
     {/* Fifteenth Dropdown Button */}
     <DropdownButton
-      buttonText="Button 15"
+      buttonText="O"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 15</p>
@@ -220,7 +220,7 @@ const Dictionary: React.FC = () => {
 
     {/* Sixteenth Dropdown Button */}
     <DropdownButton
-      buttonText="Button 16"
+      buttonText="P"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 16</p>
@@ -231,7 +231,7 @@ const Dictionary: React.FC = () => {
 
     {/* Seventeenth Dropdown Button */}
     <DropdownButton
-      buttonText="Button 17"
+      buttonText="Q"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 17</p>
@@ -242,7 +242,7 @@ const Dictionary: React.FC = () => {
 
     {/* Eighteenth Dropdown Button */}
     <DropdownButton
-      buttonText="Button 18"
+      buttonText="R"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 18</p>
@@ -253,7 +253,7 @@ const Dictionary: React.FC = () => {
 
     {/* Nineteenth Dropdown Button */}
     <DropdownButton
-      buttonText="Button 19"
+      buttonText="S"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 19</p>
@@ -264,7 +264,7 @@ const Dictionary: React.FC = () => {
 
     {/* Twentieth Dropdown Button */}
     <DropdownButton
-      buttonText="Button 20"
+      buttonText="T"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 20</p>
@@ -275,7 +275,7 @@ const Dictionary: React.FC = () => {
 
     {/* Twenty-first Dropdown Button */}
     <DropdownButton
-      buttonText="Button 21"
+      buttonText="U"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 21</p>
@@ -286,7 +286,7 @@ const Dictionary: React.FC = () => {
 
     {/* Twenty-second Dropdown Button */}
     <DropdownButton
-      buttonText="Button 22"
+      buttonText="W"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 22</p>
@@ -297,7 +297,29 @@ const Dictionary: React.FC = () => {
 
     {/* Twenty-third Dropdown Button */}
     <DropdownButton
-      buttonText="Button 23"
+      buttonText="X"
+      dropdownContent={
+        <div>
+          <p>Dropdown content for Button 23</p>
+          <p>Extra information goes here...</p>
+        </div>
+      }
+    />
+
+    {/* Twenty-third Dropdown Button */}
+    <DropdownButton
+      buttonText="Y"
+      dropdownContent={
+        <div>
+          <p>Dropdown content for Button 23</p>
+          <p>Extra information goes here...</p>
+        </div>
+      }
+    />
+
+    {/* Twenty-third Dropdown Button */}
+    <DropdownButton
+      buttonText="Z"
       dropdownContent={
         <div>
           <p>Dropdown content for Button 23</p>
