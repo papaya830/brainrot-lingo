@@ -13,7 +13,7 @@ return (
             <header>
                 <nav>
                     <Link to="/">
-                        <img src="/images/new-logo.png" alt="Logo" className="logo-img" />
+                         <img src="/images/new-logo.png" alt="Logo" className="logo-img" />
                     </Link>  
                     <ul>
                         <li>
