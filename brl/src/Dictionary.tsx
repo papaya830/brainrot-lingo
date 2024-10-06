@@ -2,14 +2,9 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import DropdownButton from './DropdownButton.tsx';
+import "./App.css"
 
 const Dictionary: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const onClick = () => {
-        setIsOpen((prev) => !prev);
-    };
-
     const buttonPlacement: React.CSSProperties = {
         display: "flex",
         alignItems: "center", 
@@ -27,25 +22,10 @@ const Dictionary: React.FC = () => {
         width: '100%',
     };
 
-    const buttonStyle: React.CSSProperties = {
-        padding: "10px 20px", // Padding for the button
-        backgroundImage: 'url("images/jh.jpg")', // Set the button's background image
-        backgroundSize: 'cover', // Make sure the image covers the button
-        backgroundPosition: 'center', // Center the image
-        borderRadius: "5px", // Rounded corners
-        cursor: "pointer", // Pointer cursor on hover
-        width: '1000px', // Width for the button
-        height: '100px', // Height for the button
-        border: '2px solid #000000',
-        fontFamily: 'Roboto, sans-serif',
-        fontSize: '40px',
-        textAlign: 'left',
-      };
-
     return (
 
         <>
-        <div className="">
+        <div style={bgStyle}>
         <header>
             <nav>
                 {/* Logo on the left */}
@@ -66,7 +46,7 @@ const Dictionary: React.FC = () => {
                 </ul>
             </nav>
         </header>
-        </div>
+        
     
 
         <div className="dropdown" style={bgStyle}>
@@ -113,6 +93,7 @@ const Dictionary: React.FC = () => {
           <p>© 2024 BrainRot Lingo. All rights reserved.</p>
         </footer>
     {/*</></div>*/}
+    </div>
     </>
     );
   };
