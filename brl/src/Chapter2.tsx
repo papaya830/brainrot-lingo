@@ -349,7 +349,7 @@ const brainrotData = [
 },
 {
     "term": "You Are My Sunshine",
-    "definition": "A phrase expressing deep affection or love for someone, often used in a sentimental context.",
+    "definition": "A phrase expressing deep affection or love for someone or something, often used in a sentimental context.",
     "examples": []
 },
 {
