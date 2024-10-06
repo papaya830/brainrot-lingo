@@ -20,11 +20,12 @@
 
 /* Logo Styling */
 .logo-img {
-  width: 50px; /* Adjust the logo size */
+  width: 180px; /* Adjust the logo size */
   height: auto; /* Maintain aspect ratio */
   vertical-align: middle; /* Align the logo with nav items */
   display: flex; /* Flexbox to align vertically */
   align-items: center; /* Center vertically */
+  margin-top: 90px;
 }
 
 /* Background Image */
@@ -74,10 +75,10 @@ body {
 header {
   opacity: 100;
   background-color: rgba(0, 123, 255, 1); /* Semi-transparent background for visibility */
-  padding: 1rem 2rem; /* Padding around the header */
+  padding: 0.5rem 1rem; /* Padding around the header */
   display: flex; /* Flexbox for header */
   align-items: center; /* Center items vertically */
-  z-index: 10; /* Make sure the header is above the background */
+  z-index: 5; /* Make sure the header is above the background */
 }
 
 /* Nav Styling */
@@ -100,11 +101,12 @@ nav li {
 nav a {
   color: white; /* White text color for links */
   text-decoration: none; /* Remove underline from links */
-  font-size: 1.5rem; /* Slightly larger text */
+  font-size: 1.7rem; /* Slightly larger text */
   transition: color 0.3s ease; /* Smooth color transition */
   display: flex; /* Flexbox to align vertically */
   align-items: center; /* Center vertically */
-  height: 50px; /* Set a fixed height for nav links to match logo height */
+  height: 45px; /* Set a fixed height for nav links to match logo height */
+  transform: translateY(-25px);
 }
 
 nav a:hover {

@@ -6,7 +6,7 @@ const Chapter3: React.FC = () => {
             <header>
               <nav>
                   <Link to="/">
-                      <img src="/images/default-logo.png" alt="Logo" className="logo-img" />
+                       <img src="/images/new-logo.png" alt="Logo" className="logo-img" />
                   </Link>
                   
                   <ul>

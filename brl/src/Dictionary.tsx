@@ -16,7 +16,7 @@ const Dictionary: React.FC = () => {
                     <nav>
                         {/* Logo on the left */}
                         <Link to="/">
-                            <img src="/images/default-logo.png" alt="Logo" className="logo-img" />
+                            <img src="/images/new-logo.png" alt="Logo" className="logo-img" />
                         </Link>
                         {/* Navigation links in the center */}
                         <ul>
