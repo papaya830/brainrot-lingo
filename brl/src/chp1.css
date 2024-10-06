@@ -1,9 +1,11 @@
 .flashcard-front h3 {
   font-size: 3em; /* Increase the size for the term */
   font-family: 'Roboto', 'Open Sans', 'Raleway', sans-serif;
+  color: #1C2A18;
+
 }
 
 .flashcard-back p {
-  font-size: 2.5em; /* Increase the size for the definition */
+  font-size: 2em; /* Increase the size for the definition */
   font-family: 'Roboto', 'Open Sans', 'Raleway', sans-serif;
 }

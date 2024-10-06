@@ -3,13 +3,15 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  background: none !important; /* Remove any background image */
 }
 
 .flashcard {
   perspective: 1000px; /* Add perspective for 3D flip effect */
-  width: 900px; /* Width of the flashcard */
-  height: 300px; /* Height of the flashcard */
+  width: 800px; /* Width of the flashcard */
+  height: 400px; /* Height of the flashcard */
   margin-bottom: 20px;
+  border-radius: 20px; /* Make the corners rounded */
 }
 
 .flashcard-inner {
@@ -30,7 +32,7 @@
   height: 100%;
   backface-visibility: hidden; /* Hide the back when front is visible */
   border: 2px solid #ccc;
-  border-radius: 50px;
+  border-radius: 10px;
   padding: 20px;
   background-color: #f9f9f9;
   display: flex;
@@ -39,16 +41,17 @@
 }
 
 .flashcard-front {
-  background-color: #f9f9f9; /* Front side style */
+  background-color: #C1E899; /* Front side style */
 }
 
 .flashcard-back {
-  background-color: #e0e0e0; /* Back side style */
+  background-color: #ffffff; /* Back side style */
   transform: rotateY(180deg); /* Rotate the back */
 }
 
 .flashcard-question {
   font-size: 4em;
+  color: #55883B;
 }
 
 .flashcard-answer, .flashcard-example {
@@ -67,5 +70,6 @@ button {
 }
 
 button:hover {
-  background-color: #eee;
+  background-color: #D8BFD8;
 }
+
