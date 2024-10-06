@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import './QuizPage.css'; // Import your CSS file for styling
 
@@ -367,65 +367,76 @@ const shuffleArray = (array: any[]) => {
 };
 
 const Chapter2: React.FC = () => {
-  const [selectedTerm, setSelectedTerm] = useState<string | null>(null); // Track selected term
-  const [correctTerms, setCorrectTerms] = useState<string[]>([]); // Track correct terms
-  const [correctDefinitions, setCorrectDefinitions] = useState<string[]>([]); // Track correct definitions
-  const [incorrectSelection, setIncorrectSelection] = useState<string | null>(null); // Track incorrect answer
-  const [randomData, setRandomData] = useState<any[]>([]); // Random 5 terms/definitions
-  const [shuffledDefinitions, setShuffledDefinitions] = useState<any[]>([]); // Shuffled definitions
-  const [correctCount, setCountCorrect] = useState<number>(0); // Track correct count
-  const [incorrectCount, setIncorrectCount] = useState<number>(0); // Track incorrect count
-  const [gameOverMessage, setGameOverMessage] = useState<string | null>(null); // Game over message
+  const [selectedTerm, setSelectedTerm] = useState<string | null>(null);
+  const [correctTerms, setCorrectTerms] = useState<string[]>([]);
+  const [correctDefinitions, setCorrectDefinitions] = useState<string[]>([]);
+  const [incorrectSelection, setIncorrectSelection] = useState<string | null>(null);
+  const [randomData, setRandomData] = useState<any[]>([]);
+  const [shuffledDefinitions, setShuffledDefinitions] = useState<any[]>([]);
+  const [correctCount, setCountCorrect] = useState<number>(0);
+  const [incorrectCount, setIncorrectCount] = useState<number>(0);
+  const [gameOverMessage, setGameOverMessage] = useState<string | null>(null);
 
-  const numQuestions = 5; // Total number of questions
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [showVideo, setShowVideo] = useState(false);
+
+  const numQuestions = 5;
 
   // Function to restart the game
   const handleRestart = () => {
-    setCorrectTerms([]); // Clear correct terms
-    setCorrectDefinitions([]); // Clear correct definitions
-    setSelectedTerm(null); // Reset selected term
-    setIncorrectSelection(null); // Clear incorrect selection
-    setCountCorrect(0); // Reset correct count
-    setIncorrectCount(0); // Reset incorrect count
-    setGameOverMessage(null); // Clear game over message
+    setCorrectTerms([]);
+    setCorrectDefinitions([]);
+    setSelectedTerm(null);
+    setIncorrectSelection(null);
+    setCountCorrect(0);
+    setIncorrectCount(0);
+    setGameOverMessage(null);
+    setShowVideo(false);
 
-    // Shuffle and set new random data
     const shuffledData = shuffleArray(brainrotData).slice(0, numQuestions);
     setRandomData(shuffledData);
     setShuffledDefinitions(shuffleArray(shuffledData.map(item => item.definition)));
   };
 
   const incrementCorrect = () => {
-    setCountCorrect((prevCount) => prevCount + 1); // Increment correct count
+    setCountCorrect((prevCount) => prevCount + 1);
   };
 
   const incrementIncorrect = () => {
-    setIncorrectCount((prevCount) => prevCount + 1); // Increment incorrect count
+    setIncorrectCount((prevCount) => prevCount + 1);
   };
 
   useEffect(() => {
-    // Shuffle and select 5 random terms/definitions when the component mounts
     const shuffledData = shuffleArray(brainrotData).slice(0, numQuestions);
     setRandomData(shuffledData);
-    setShuffledDefinitions(shuffleArray(shuffledData.map(item => item.definition))); // Shuffle only the definitions
+    setShuffledDefinitions(shuffleArray(shuffledData.map(item => item.definition)));
   }, []);
 
   useEffect(() => {
-    // Check if all correct answers have been selected
     if (correctCount === numQuestions) {
-      // Set game over message with the count of incorrect answers
-      setGameOverMessage(`Game over! You got ${incorrectCount} wrong answers.`);
-      
-      // Restart the game after 3 seconds
-      setTimeout(handleRestart, 3000);
+      if (incorrectCount === 0) {
+        setGameOverMessage(`Game over! You got NO wrong answers. +100000000000000000000 aura`);
+        setShowVideo(true); // Show video only if there are no incorrect answers
+      } else if (incorrectCount >= numQuestions) {
+        setGameOverMessage(`Game over! You got ${incorrectCount} wrong answers. You answered wrong more than you answered right. -10000000 aura`);
+      } else {
+        setGameOverMessage(`Game over! You got ${incorrectCount} wrong answers. You put more right answers than wrong ones. No aura change`);
+      }
+
+      // Play the video if the condition is met
+      if (videoRef.current && incorrectCount === 0) {
+        videoRef.current.play();
+      }
+
+      // Restart the game after 7 seconds
+      setTimeout(handleRestart, 7000);
     }
   }, [correctCount, incorrectCount]);
 
-  // Handles term click, but disables already correct terms
   const handleTermClick = (term: string) => {
     if (!correctTerms.includes(term)) {
       setSelectedTerm(term);
-      setIncorrectSelection(null); // Reset incorrect selection when choosing a new term
+      setIncorrectSelection(null);
     }
   };
 
@@ -433,72 +444,80 @@ const Chapter2: React.FC = () => {
     if (selectedTerm) {
       const correctDefinition = randomData.find(item => item.term === selectedTerm)?.definition;
       if (correctDefinition === definition) {
-        // Add the term and definition to the correct answers
         setCorrectTerms((prev) => [...prev, selectedTerm]);
         setCorrectDefinitions((prev) => [...prev, definition]);
-        setSelectedTerm(null); // Reset the selected term after correct answer
-        
+        setSelectedTerm(null);
         incrementCorrect();
       } else {
-        setIncorrectSelection(definition); // Mark the incorrect selection
+        setIncorrectSelection(definition);
         incrementIncorrect();
-        setTimeout(() => setIncorrectSelection(null), 1500); // Remove red background after 1.5 seconds
+        setTimeout(() => setIncorrectSelection(null), 1500);
       }
     }
   };
 
-  return <div>
-  <header>
-      <nav>
-          {/* Logo on the left */}
+  return (
+    <div>
+      <header>
+        <nav>
           <Link to="/">
             <img src="/images/new-logo.png" alt="Logo" className="logo-img" />
           </Link>
-          {/* Navigation links in the center */}
           <ul>
-              <li>
+            <li>
               <NavLink to="/" activeClassName="active">Home</NavLink>
-              </li>
-              <li>
+            </li>
+            <li>
               <NavLink to="/learn" activeClassName="active">Learn</NavLink>
-              </li>
-              <li>
+            </li>
+            <li>
               <NavLink to="/dictionary" activeClassName="active">Dictionary</NavLink>
-              </li>
+            </li>
           </ul>
-      </nav>
-  </header> 
+        </nav>
+      </header>
 
-    <div className="quiz-container">
-      <div className="terms-column">
-        <h2>Terms</h2>
-        {randomData.map((item, index) => (
-          <div 
-            key={index} 
-            className={`quiz-box ${correctTerms.includes(item.term) ? "correct" : ""} ${selectedTerm === item.term ? "selected" : ""}`} 
-            onClick={() => handleTermClick(item.term)}
-          >
-            {item.term}
-          </div>
-        ))}
-      </div>
-      <div className="definitions-column">
-        <h2>Definitions</h2>
-        {shuffledDefinitions.map((definition, index) => (
-          <div 
-            key={index} 
-            className={`quiz-box ${correctDefinitions.includes(definition) ? "correct" : ""} ${incorrectSelection === definition ? "incorrect" : ""}`} 
-            onClick={() => handleDefinitionClick(definition)}
-          >
-            {definition}
-          </div>
-        ))}
-      </div>
+      <div className="quiz-container">
+        <div className="terms-column">
+          <h2>Terms</h2>
+          {randomData.map((item, index) => (
+            <div
+              key={index}
+              className={`quiz-box ${correctTerms.includes(item.term) ? "correct" : ""} ${selectedTerm === item.term ? "selected" : ""}`}
+              onClick={() => handleTermClick(item.term)}
+            >
+              {item.term}
+            </div>
+          ))}
+        </div>
+        <div className="definitions-column">
+          <h2>Definitions</h2>
+          {shuffledDefinitions.map((definition, index) => (
+            <div
+              key={index}
+              className={`quiz-box ${correctDefinitions.includes(definition) ? "correct" : ""} ${incorrectSelection === definition ? "incorrect" : ""}`}
+              onClick={() => handleDefinitionClick(definition)}
+            >
+              {definition}
+            </div>
+          ))}
+        </div>
 
-      {/* Show the game over message */}
-      {gameOverMessage && <div className="game-over">{gameOverMessage}</div>}
+        {/* Show the game over message */}
+        {gameOverMessage && <div className="game-over">{gameOverMessage}</div>}
+
+        {/* Show video only if there are no incorrect answers */}
+        {showVideo && incorrectCount === 0 && (
+          <div className="video-container">
+            <video ref={videoRef} width="600" height="400" controls autoPlay>
+              <source src="/videos/happy_happy_cat.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        )}
+      </div>
     </div>
-    </div>
+  );
 };
 
 export default Chapter2;
