@@ -195,6 +195,10 @@ h2 {
   max-width: 800px; /* Limit width for better readability */
   margin: 40px auto; /* Center horizontally with space above and below */
   text-align: center; /* Center align text */
+
+      opacity: 0; /* Start with opacity 0 */
+      animation: fadeIn 1s forwards; /* Fade in animation */
+      animation-delay: 2.6s; /* Delay of 4 seconds */
 }
 
 .description-blob p {
@@ -203,6 +207,19 @@ h2 {
   line-height: 1.6; /* Spacing between lines for readability */
   margin: 0; /* Remove default margin */
   font-family: 'Roboto', 'Open Sans', 'Raleway', sans-serif;
+
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeIn 1s forwards; /* Fade in animation */
+    animation-delay: 2.6s; /* Delay of 4 seconds */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start as invisible */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+  }
 }
 
 /* Responsive Design */
@@ -215,3 +232,4 @@ h2 {
     font-size: 1rem; /* Smaller font size on mobile */
   }
 }
+
