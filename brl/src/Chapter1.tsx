@@ -381,6 +381,10 @@ const Chapter1: React.FC = () => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % selectedFlashcards.length);
     };
 
+    const handlePrev = () => {
+      setCurrentIndex((prevIndex) => (prevIndex - 1) % selectedFlashcards.length);
+    };
+
     const toggleVideo = (video: string) => {
       if (selectedVideo === video) {
         setShowVideo(!showVideo);
@@ -422,6 +426,10 @@ const Chapter1: React.FC = () => {
               />
             )}
             <button onClick={handleNext}>Next Card</button>
+            {currentIndex > 0 && (
+              <button onClick={handlePrev}>Previous card</button>
+            )}
+            
             <button onClick={() => toggleVideo("subway")}>
               {showVideo && selectedVideo === "subway" ? "Hide Subway Surfers" : "Subway Surfers"}
             </button>
