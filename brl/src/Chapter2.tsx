@@ -333,7 +333,6 @@ const brainrotData = [
   }
 ];
 
-
 // Function to shuffle an array
 const shuffleArray = (array: any[]) => {
   return array.sort(() => Math.random() - 0.5);
@@ -345,96 +344,109 @@ const Chapter2: React.FC = () => {
   const [correctDefinitions, setCorrectDefinitions] = useState<string[]>([]); // Track correct definitions
   const [incorrectSelection, setIncorrectSelection] = useState<string | null>(null); // Track incorrect answer
   const [randomData, setRandomData] = useState<any[]>([]); // Random 5 terms/definitions
+  const [correctCount, setCountCorrect] = useState<number>(0); // Track correct count
+  const [incorrectCount, setIncorrectCount] = useState<number>(0); // Track incorrect count
+  const [gameOverMessage, setGameOverMessage] = useState<string | null>(null); // Game over message
 
-  const [correctCount, setCountCorrect] = useState<number>(0); 
-  const [incorrectCount, setIncountCorrect] = useState<number>(0);
+  const numQuestions = 5; // Total number of questions
 
+  // Function to restart the game
   const handleRestart = () => {
     setCorrectTerms([]); // Clear correct terms
     setCorrectDefinitions([]); // Clear correct definitions
     setSelectedTerm(null); // Reset selected term
     setIncorrectSelection(null); // Clear incorrect selection
     setCountCorrect(0); // Reset correct count
-    setIncountCorrect(0); // Reset incorrect count
+    setIncorrectCount(0); // Reset incorrect count
+    setGameOverMessage(null); // Clear game over message
 
     // Shuffle and set new random data
-    const shuffledData = shuffleArray(brainrotData).slice(0, 5);
+    const shuffledData = shuffleArray(brainrotData).slice(0, numQuestions);
     setRandomData(shuffledData);
   };
 
   const incrementCorrect = () => {
-    setCountCorrect(correctCount + 1); // Increment by 1
+    setCountCorrect((prevCount) => prevCount + 1); // Increment correct count
   };
 
   const incrementIncorrect = () => {
-    setCountCorrect(correctCount + 1); // Increment by 1
+    setIncorrectCount((prevCount) => prevCount + 1); // Increment incorrect count
   };
 
   useEffect(() => {
-      // Shuffle and select 5 random terms/definitions when the component mounts
-      const shuffledData = shuffleArray(brainrotData).slice(0, 5);
-      setRandomData(shuffledData);
+    // Shuffle and select 5 random terms/definitions when the component mounts
+    const shuffledData = shuffleArray(brainrotData).slice(0, numQuestions);
+    setRandomData(shuffledData);
   }, []);
+
+  useEffect(() => {
+    // Check if all correct answers have been selected
+    if (correctCount === numQuestions) {
+      // Set game over message with the count of incorrect answers
+      setGameOverMessage(`Game over! You got ${incorrectCount} wrong answers.`);
+      
+      // Restart the game after 3 seconds
+      setTimeout(handleRestart, 3000);
+    }
+  }, [correctCount, incorrectCount]);
 
   // Handles term click, but disables already correct terms
   const handleTermClick = (term: string) => {
-      if (!correctTerms.includes(term)) {
-          setSelectedTerm(term);
-          setIncorrectSelection(null); // Reset incorrect selection when choosing a new term
-      }
+    if (!correctTerms.includes(term)) {
+      setSelectedTerm(term);
+      setIncorrectSelection(null); // Reset incorrect selection when choosing a new term
+    }
   };
 
   const handleDefinitionClick = (definition: string) => {
-      if (selectedTerm) {
-          const correctDefinition = randomData.find(item => item.term === selectedTerm)?.definition;
-          if (correctDefinition === definition) {
-              // Add the term and definition to the correct answers
-              setCorrectTerms((prev) => [...prev, selectedTerm]);
-              setCorrectDefinitions((prev) => [...prev, definition]);
-              setSelectedTerm(null); // Reset the selected term after correct answer
-              
-              incrementCorrect();
-              if(correctCount === 5){
-                handleRestart();
-              }
-
-          } else {
-              setIncorrectSelection(definition); // Mark the incorrect selection
-              incrementIncorrect();
-              setTimeout(() => setIncorrectSelection(null), 1500); // Remove red background after 1 second
-          }
+    if (selectedTerm) {
+      const correctDefinition = randomData.find(item => item.term === selectedTerm)?.definition;
+      if (correctDefinition === definition) {
+        // Add the term and definition to the correct answers
+        setCorrectTerms((prev) => [...prev, selectedTerm]);
+        setCorrectDefinitions((prev) => [...prev, definition]);
+        setSelectedTerm(null); // Reset the selected term after correct answer
+        
+        incrementCorrect();
+      } else {
+        setIncorrectSelection(definition); // Mark the incorrect selection
+        incrementIncorrect();
+        setTimeout(() => setIncorrectSelection(null), 1100); // Remove red background after 1.5 seconds
       }
+    }
   };
 
   return (
-      <div className="quiz-container">
-          <div className="terms-column">
-              <h2>Terms</h2>
-              {randomData.map((item, index) => (
-                  <div 
-                      key={index} 
-                      className={`quiz-box ${correctTerms.includes(item.term) ? "correct" : ""} ${selectedTerm === item.term ? "selected" : ""}`} 
-                      onClick={() => handleTermClick(item.term)}
-                  >
-                      {item.term}
-                  </div>
-              ))}
+    <div className="quiz-container">
+      <div className="terms-column">
+        <h2>Terms</h2>
+        {randomData.map((item, index) => (
+          <div 
+            key={index} 
+            className={`quiz-box ${correctTerms.includes(item.term) ? "correct" : ""} ${selectedTerm === item.term ? "selected" : ""}`} 
+            onClick={() => handleTermClick(item.term)}
+          >
+            {item.term}
           </div>
-          <div className="definitions-column">
-              <h2>Definitions</h2>
-              {randomData.map((item, index) => (
-                  <div 
-                      key={index} 
-                      className={`quiz-box ${correctDefinitions.includes(item.definition) ? "correct" : ""} ${incorrectSelection === item.definition ? "incorrect" : ""}`} 
-                      onClick={() => handleDefinitionClick(item.definition)}
-                  >
-                      {item.definition}
-                  </div>
-              ))}
-          </div>
+        ))}
       </div>
+      <div className="definitions-column">
+        <h2>Definitions</h2>
+        {randomData.map((item, index) => (
+          <div 
+            key={index} 
+            className={`quiz-box ${correctDefinitions.includes(item.definition) ? "correct" : ""} ${incorrectSelection === item.definition ? "incorrect" : ""}`} 
+            onClick={() => handleDefinitionClick(item.definition)}
+          >
+            {item.definition}
+          </div>
+        ))}
+      </div>
+
+      {/* Show the game over message */}
+      {gameOverMessage && <div className="game-over">{gameOverMessage}</div>}
+    </div>
   );
 };
-
 
 export default Chapter2;
