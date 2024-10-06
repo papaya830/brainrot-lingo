@@ -7,8 +7,8 @@
 
 .flashcard {
   perspective: 1000px; /* Add perspective for 3D flip effect */
-  width: 700px; /* Width of the flashcard */
-  height: 200px; /* Height of the flashcard */
+  width: 900px; /* Width of the flashcard */
+  height: 300px; /* Height of the flashcard */
   margin-bottom: 20px;
 }
 
@@ -30,7 +30,7 @@
   height: 100%;
   backface-visibility: hidden; /* Hide the back when front is visible */
   border: 2px solid #ccc;
-  border-radius: 10px;
+  border-radius: 50px;
   padding: 20px;
   background-color: #f9f9f9;
   display: flex;
@@ -48,20 +48,22 @@
 }
 
 .flashcard-question {
-  font-size: 1.5em;
+  font-size: 4em;
 }
 
 .flashcard-answer, .flashcard-example {
-  font-size: 1.2em;
+  font-size: 4em;
 }
 
 button {
   margin: 5px;
-  padding: 10px 15px;
-  font-size: 1em;
+  padding: 15px 25px;
+  font-size: 1.5em;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
+  font-family: 'Roboto', 'Open Sans', 'Raleway', sans-serif;
+  font-style: italic;
 }
 
 button:hover {

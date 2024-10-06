@@ -354,14 +354,14 @@ const Chapter1: React.FC = () => {
 
   return (
     <div className="flashcard-container">
-      <h1>Flashcards</h1>
+      <h1>Learning Deck</h1>
       {selectedFlashcards.length > 0 && (
         <Flashcard
           term={selectedFlashcards[currentIndex].term}
           definition={selectedFlashcards[currentIndex].definition}
         />
       )}
-      <button onClick={handleNext}>Next Flashcard</button>
+      <button onClick={handleNext}>Next Card</button>
     </div>
   );
 };
