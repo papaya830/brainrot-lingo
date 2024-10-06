@@ -6,6 +6,6 @@
 }
 
 .flashcard-back p {
-  font-size: 2em; /* Increase the size for the definition */
+  font-size: 1.8em; /* Increase the size for the definition */
   font-family: 'Roboto', 'Open Sans', 'Raleway', sans-serif;
 }

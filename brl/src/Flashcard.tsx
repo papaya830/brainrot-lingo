@@ -5,9 +5,10 @@ import './Flashcard.css'; // Ensure you have this file for styling
 interface FlashcardProps {
   term: string;
   definition: string;
+  image?: string; // Accept image as a prop
 }
 
-const Flashcard: React.FC<FlashcardProps> = ({ term, definition }) => {
+const Flashcard: React.FC<FlashcardProps> = ({ term, definition, image }) => {
   const [flipped, setFlipped] = useState(false);
 
   const handleClick = () => {
@@ -22,6 +23,11 @@ const Flashcard: React.FC<FlashcardProps> = ({ term, definition }) => {
         </div>
         <div className="flashcard-back">
           <p>{definition}</p>
+          {image && (
+            <div className="hover-image-container">
+              <img src={image} alt={term} className="hover-image" />
+            </div>
+          )}
         </div>
       </div>
     </div>

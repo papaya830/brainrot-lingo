@@ -26,6 +26,7 @@ const allFlashcards = [
       "examples": [
         "He’s such an alpha; everyone looks to him for guidance in group projects."
       ],
+      "image": "/public/images/alpha.png"
   },
   {
       "term": "Bestie",
@@ -33,11 +34,13 @@ const allFlashcards = [
       "examples": [
         "Hey bestie."
       ],
+      "image": "/public/images/bestie.png"
   },
   {
       "term": "Brainrot",
       "definition": "Somebody who loses touch with the real world and hyper consumes online content.",
       "examples": [],
+      "image": "/public/images/brainrot.png"
   },
   {
       "term": "Baked",
@@ -67,6 +70,7 @@ const allFlashcards = [
         "I’m cooked. (negative)",
         "He cooked. (positive)"
       ],
+      "image": "/public/images/cooked.png"
   },
   {
       "term": "Chat",
@@ -79,6 +83,7 @@ const allFlashcards = [
       "examples": [
         "That’s cap."
       ],
+      "image": "/public/images/cap.png"
   },
   {
       "term": "Doom Scrolling",
@@ -88,6 +93,7 @@ const allFlashcards = [
       "examples": [
         "I’ve been doom scrolling TikTok for like 5 hours now!"
       ],
+      "image": "/public/images/doomscrolling.png"
   },
   {
       "term": "Edging",
@@ -95,6 +101,7 @@ const allFlashcards = [
       "examples": [
         "Stop edging me right now! Give me the answer!"
       ],
+      "image": "/public/images/edging.png"
   },
   {
       "term": "Eepy",
@@ -102,6 +109,7 @@ const allFlashcards = [
       "examples": [
         "I feel very eepy."
       ],
+      "image": "/public/images/eepy.png"
   },
   {
       "term": "Fanum Tax",
@@ -110,6 +118,7 @@ const allFlashcards = [
         "Synonym: Father Tax when they take food from their children."
       ],
       "examples": [],
+      "image": "/public/images/fanumtax.png"
   },
   {
       "term": "For Real",
@@ -123,6 +132,7 @@ const allFlashcards = [
         "You are into unusual things."
       ],
       "examples": [],
+      "image": "/public/images/freak.png"
   },
   {
       "term": "Gyatt",
@@ -130,6 +140,7 @@ const allFlashcards = [
       "examples": [
         "Wow, that girl has a gyatt."
       ],
+      "image": "/public/images/gyatt.png"
   },
   {
       "term": "Glazing",
@@ -137,6 +148,7 @@ const allFlashcards = [
       "examples": [
         "You are glazing him."
       ],
+      "image": "/public/images/glazing.png"
   },
   {
       "term": "Gatekeeping",
@@ -144,6 +156,7 @@ const allFlashcards = [
       "examples": [
         "I’m gatekeeping."
       ],
+      "image": "/public/images/gatekeeping.png"
   },
   {
       "term": "Hawk Tuah",
@@ -151,6 +164,7 @@ const allFlashcards = [
       "examples": [
         "Hawk Tuah Spit on that thang."
       ],
+      "image": "/public/images/hawktuah.png"
   },
   {
       "term": "Ipad Kid",
@@ -158,6 +172,7 @@ const allFlashcards = [
       "examples": [
         "Stop being such an Ipad kid! (person plays on iPad during a meal)"
       ],
+      "image": "/public/images/ipadkid.png"
   },
   {
       "term": "Impostor",
@@ -169,6 +184,7 @@ const allFlashcards = [
         "Dude, you’re an impostor right now.",
         "You're kind of like an impostor right now. That’s kinda sus."
       ],
+      "image": "/public/images/imposter.png"
   },
   {
       "term": "Lock In",
@@ -176,11 +192,13 @@ const allFlashcards = [
       "examples": [
         "I need to lock in and finish my homework."
       ],
+      "image": "/public/images/lockin.png"
   },
   {
       "term": "Mewing",
       "definition": "Mewing is a form of oral posture training purported to improve jaw and facial structure. It involves positioning your tongue towards the roof of your mouth to improve jaw sharpness and create a jawline.",
       "examples": [],
+      "image": "/public/images/mewing.png"
   },
   {
       "term": "Mogging",
@@ -188,6 +206,7 @@ const allFlashcards = [
       "examples": [
         "I’m mogging you."
       ],
+      "image": "/public/images/mog.png"
   },
   {
       "term": "'___'-maxing",
@@ -205,6 +224,7 @@ const allFlashcards = [
       "examples": [
         "Skibidi Ohio rizz, which is an insult meaning a weird person who doesn’t have the ability to flirt."
       ],
+      "image": "/public/images/ohio.png"
   },
   {
       "term": "Oi oi oi",
@@ -219,6 +239,7 @@ const allFlashcards = [
       "examples": [
         "Friend 1: Yeah, I got 100% on this test. Friend 2: PURRRR."
       ],
+      "image": "/public/images/purr.png"
   },
   {
       "term": "Preach",
@@ -236,6 +257,7 @@ const allFlashcards = [
       "examples": [
         "Hey queen, how are you?"
       ],
+      "image": "/public/images/queen.png"
   },
   {
       "term": "Rizz",
@@ -245,6 +267,7 @@ const allFlashcards = [
         "A “rizzler” is someone who is a master at using rizz and has large amounts of rizz."
       ],
       "examples": [],
+      "image": "/public/images/rizz.png"
   },
   {
       "term": "Sigma",
@@ -254,11 +277,13 @@ const allFlashcards = [
         "It can imply that the person is spending too much time thinking about or idolizing the sigma male lifestyle, often in a self-deprecating or ironic manner."
       ],
       "examples": [],
+      "image": "/public/images/sigma.png"
   },
   {
       "term": "Skibidi Toilet",
       "definition": "A popular internet meme involving a humorous take on toilets and their animated interactions.",
       "examples": [],
+      "image": "/public/images/skibbidi_toilet.png"
   },
   {
       "term": "Sis",
@@ -319,6 +344,7 @@ const allFlashcards = [
       "examples": [
         "My sister yassified me before I went out."
       ],
+      "image": "/public/images/yassify.png"
   },
   {
       "term": "You Are My Sunshine",
@@ -359,6 +385,7 @@ const Chapter1: React.FC = () => {
         <Flashcard
           term={selectedFlashcards[currentIndex].term}
           definition={selectedFlashcards[currentIndex].definition}
+          image={selectedFlashcards[currentIndex].image}
         />
       )}
       <button onClick={handleNext}>Next Card</button>
