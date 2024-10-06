@@ -4,6 +4,9 @@ import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dictionary from "./Dictionary";
 import Learn from "./Learn"; // Import the Learn component
+import Chapter1 from "./Chapter1";
+import Chapter2 from "./Chapter2"
+import Chapter3 from "./Chapter3";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +20,20 @@ const router = createBrowserRouter([
   {
     path: "/learn", // Add a route for Learn
     element: <Learn />,
+    children: [
+      {
+        path: "chapter1",
+        element: <Chapter1 />
+      },
+      {
+        path: "chapter2",
+        element: <Chapter2 />
+      },
+      {
+        path: "chapter3",
+        element: <Chapter3 />
+      },
+    ],
   },
 ]);
 
