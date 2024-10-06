@@ -31,13 +31,6 @@
     opacity: 1; /* Make content fully visible on hover */
     /*visibility: visible; /* Ensure content is visible */
 }
-
-  .dropdown-content:hover {
-    color: #ffd700; /* Change to a darker shade or a different color */
-    /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9); /* Make the shadow more pronounced */
-    background-color: #0196be;
-    
-  }
   
   /* Styling for the dropdown content */
   .dropdown-content {
@@ -54,6 +47,33 @@
     opacity: 0; /* Start with content invisible */
 
   }
+
+
+
+
+
+.button-placement {
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Vertically centers flex items */
+    flex-direction: column; /* Arranges flex items in a column */
+    min-height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    padding-top: 100px; /* Space at the top */
+    
+}
+
+.bg-style {
+
+    background-color: #ffffff;
+    width: 100%; /* Full width */
+    height: 100%;
+    position: relative; /* Position relative for absolute positioning */
+    flex: 1; /* Allow the background to grow and fill available space */
+}
+
+
+
+
   
   /* When dropdown is open */
   .dropdown-content.open {
