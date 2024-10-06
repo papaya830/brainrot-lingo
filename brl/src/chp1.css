@@ -12,3 +12,35 @@
   margin: 0;
   max-width: 65%;
 }
+
+.video-button-container {
+  position: absolute; /* Make the container position absolute */
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the right */
+  z-index: 10; /* Ensure it appears above other content */
+}
+
+/* chp1.css */
+.content-container {
+  display: flex;
+  justify-content: center; /* Center the children initially */
+  align-items: flex-start; /* Align items to the top */
+  padding: 20px; /* Add some padding */
+}
+
+.flashcard-section {
+  transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+.shift-left {
+  transform: translateX(-30px); /* Move left when the video is shown */
+}
+
+.video-container {
+  max-width: 470px; /* Increase the maximum width for the video container */
+  width: 100%; /* Ensure it takes full width */
+  max-height: 2000px; /* Allow for larger height if needed */
+  flex-shrink: 0; /* Prevent the video container from shrinking */
+  margin-left: 10px; /* Add some spacing between video and flashcards */
+}
+

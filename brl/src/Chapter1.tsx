@@ -363,56 +363,94 @@ const allFlashcards = [
 ];
 
 const Chapter1: React.FC = () => {
-  const [selectedFlashcards, setSelectedFlashcards] = useState<any[]>([]); // State to track selected flashcards
-  const [currentIndex, setCurrentIndex] = useState(0); // State to track the current flashcard
+    const [selectedFlashcards, setSelectedFlashcards] = useState<any[]>([]);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [showVideo, setShowVideo] = useState(false);
+    const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
-  // Function to select random flashcards
-  const selectRandomFlashcards = () => {
-    const shuffled = allFlashcards.sort(() => 0.5 - Math.random());
-    setSelectedFlashcards(shuffled.slice(0, 6)); // Select 6 random flashcards
-  };
+    const selectRandomFlashcards = () => {
+      const shuffled = allFlashcards.sort(() => 0.5 - Math.random());
+      setSelectedFlashcards(shuffled.slice(0, 46));
+    };
 
-  useEffect(() => {
-    selectRandomFlashcards(); // Select random flashcards on component mount
-  }, []);
+    useEffect(() => {
+      selectRandomFlashcards();
+    }, []);
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % selectedFlashcards.length); // Cycle through selected flashcards
-  };
+    const handleNext = () => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % selectedFlashcards.length);
+    };
 
-  return <div>
-            <header>
-              <nav>
-                  {/* Logo on the left */}
-                  <Link to="/">
-                         <img src="/images/new-logo.png" alt="Logo" className="logo-img" />
-                  </Link>
-                  {/* Navigation links in the center */}
-                  <ul>
-                      <li>
-                      <NavLink to="/" activeClassName="active">Home</NavLink>
-                      </li>
-                      <li>
-                      <NavLink to="/learn" activeClassName="active">Learn</NavLink>
-                      </li>
-                      <li>
-                      <NavLink to="/dictionary" activeClassName="active">Dictionary</NavLink>
-                      </li>
-                  </ul>
-              </nav>
-            </header>  
-            <div  className="flashcard-container">
-              <h1>Learning Deck</h1>
-              {selectedFlashcards.length > 0 && (
-                <Flashcard
-                  term={selectedFlashcards[currentIndex].term}
-                  definition={selectedFlashcards[currentIndex].definition}
-                  image={selectedFlashcards[currentIndex].image}
-                />
-              )}
-              <button onClick={handleNext}>Next Card</button>
+    const toggleVideo = (video: string) => {
+      if (selectedVideo === video) {
+        setShowVideo(!showVideo);
+      } else {
+        setShowVideo(true);
+        setSelectedVideo(video);
+      }
+    };
+
+    return (
+      <div>
+        <header>
+          <nav>
+            <Link to="/">
+              <img src="/images/new-logo.png" alt="Logo" className="logo-img" />
+            </Link>
+            <ul>
+              <li>
+                <NavLink to="/" activeClassName="active">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/learn" activeClassName="active">Learn</NavLink>
+              </li>
+              <li>
+                <NavLink to="/dictionary" activeClassName="active">Dictionary</NavLink>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <div className="content-container">
+          <div className={`flashcard-section ${showVideo ? 'shift-left' : ''}`}>
+            <h1>Learning Deck</h1>
+            {selectedFlashcards.length > 0 && (
+              <Flashcard
+                term={selectedFlashcards[currentIndex].term}
+                definition={selectedFlashcards[currentIndex].definition}
+                image={selectedFlashcards[currentIndex].image}
+              />
+            )}
+            <button onClick={handleNext}>Next Card</button>
+            <button onClick={() => toggleVideo("subway")}>
+              {showVideo && selectedVideo === "subway" ? "Hide Subway Surfers" : "Subway Surfers"}
+            </button>
+            <button onClick={() => toggleVideo("aita")}>
+              {showVideo && selectedVideo === "aita" ? "Hide AITA" : "AITA"}
+            </button>
+          </div>
+
+          {showVideo && (
+            <div className="video-container">
+              <iframe
+                width="1200"
+                height="900"
+                src={
+                  selectedVideo === "subway"
+                    ? "https://www.youtube.com/embed/AqZ8Twh9NU4" // Embed link for Subway Surfers
+                    : "https://www.youtube.com/embed/LWKfmeUmcKY" // Embed link for AITA
+                }
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ width: '100%', height: '700px', maxWidth: '900px' }} // Adjust the width as needed
+              ></iframe>
             </div>
-  </div>
-};
+          )}
+        </div>
+      </div>
+    );
+  };
 
-export default Chapter1;
+  export default Chapter1;

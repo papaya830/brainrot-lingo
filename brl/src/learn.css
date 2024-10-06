@@ -1,0 +1,52 @@
+/* Set up the overall layout */
+.bg-style {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Horizontal layout */
+    height: 100vh; /* Full height */
+    width: 100%; /* Full width */
+}
+
+/* Content container to hold both video and cards */
+.content-container {
+    display: flex; /* Flexbox for content layout */
+    flex: 1; /* Allow to take full available space */
+}
+
+/* Video container for the vertical video */
+.video-container {
+    flex: 1; /* Allow video to take half the space */
+    display: flex; /* Center the video */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Full height */
+}
+
+/* Style for the video */
+.background-video {
+    height: 100%; /* Full height */
+    width: auto; /* Auto width to maintain aspect ratio */
+    object-fit: cover; /* Cover the area without stretching */
+}
+
+/* Card container to hold the cards */
+.card-container {
+    flex: 1; /* Allow cards to take half the space */
+    display: flex; /* Flexbox for cards layout */
+    flex-direction: column; /* Vertical stacking of cards */
+    justify-content: center; /* Center cards vertically */
+    padding: 20px; /* Add some padding */
+}
+
+/* Individual card styles */
+.card {
+    background: rgba(255, 255, 255, 0.8); /* White background with transparency */
+    margin: 10px 0; /* Vertical margin between cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s; /* Smooth transform effect */
+}
+
+/* Transform effect on card hover */
+.card:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+}
