@@ -19,19 +19,23 @@
     "definition": "Often seen as a natural leader who takes charge in social situations, commands respect, and influences others.",
     "examples": [
       "He’s such an alpha; everyone looks to him for guidance in group projects."
-    ]
+    ],
+    "image": "/public/images/alpha.png"
 },
 {
     "term": "Bestie",
     "definition": "Short for 'best friend'.",
     "examples": [
       "Hey bestie."
-    ]
+    ],
+    "image": "/public/images/bestie.png"
+
 },
 {
     "term": "Brainrot",
     "definition": "Somebody who loses touch with the real world and hyper consumes online content.",
-    "examples": []
+    "examples": [],
+    "image": "/public/images/brainrot.png"
 },
 {
     "term": "Baked",
@@ -56,11 +60,12 @@
       "'He cooked' means he did very well."
     ],
     "examples": [
-      "Let him cook.",
-      "He’s cooked.",
-      "I’m cooked.",
-      "He cooked."
-    ]
+      "Let him cook. (let him do some cool stuff)",
+      "He’s cooked. (negative)",
+      "I’m cooked. (negative)",
+      "He cooked. (positive)"
+    ],
+    "image": "/public/images/cooked.png"
 },
 {
     "term": "Chat",
@@ -72,7 +77,8 @@
     "definition": "Cap means a lie.",
     "examples": [
       "That’s cap."
-    ]
+    ],
+    "image": "/public/images/cap.png"
 },
 {
     "term": "Doom Scrolling",
@@ -81,21 +87,24 @@
     ],
     "examples": [
       "I’ve been doom scrolling TikTok for like 5 hours now!"
-    ]
+    ],
+    "image": "/public/images/doomscrolling.png"
 },
 {
     "term": "Edging",
     "definition": "Leading someone on to some sort of response without telling them what it is.",
     "examples": [
       "Stop edging me right now! Give me the answer!"
-    ]
+    ],
+    "image": "/public/images/edging.png"
 },
 {
     "term": "Eepy",
     "definition": "Similar to sleepy.",
     "examples": [
       "I feel very eepy."
-    ]
+    ],
+    "image": "/public/images/eepy.png"
 },
 {
     "term": "Fanum Tax",
@@ -103,7 +112,8 @@
       "When you take a portion of someone else's food (like the IRS with real money). This term comes from the Twitch streamer Fanum, who routinely takes part of the food his roommate and fellow streamer Kai Cenat order for takeout.",
       "Synonym: Father Tax when they take food from their children."
     ],
-    "examples": []
+    "examples": [],
+    "image": "/public/images/fanumtax.png"
 },
 {
     "term": "For Real",
@@ -116,42 +126,48 @@
       "Obscure sexual interests.",
       "You are into unusual things."
     ],
-    "examples": []
+    "examples": [],
+    "image": "/public/images/freak.png"
 },
 {
     "term": "Gyatt",
     "definition": "An inside joke 'between the guys' on TikTok, referring to an attractive girl with a curvy body type, more so referring to their butt.",
     "examples": [
       "Wow, that girl has a gyatt."
-    ]
+    ],
+    "image": "/public/images/gyatt.png"
 },
 {
     "term": "Glazing",
     "definition": "When you are meatriding or sucking up to someone. Over-hyping something or someone with too much praise.",
     "examples": [
       "You are glazing him."
-    ]
+    ],
+    "image": "/public/images/glazing.png"
 },
 {
     "term": "Gatekeeping",
     "definition": "Withholding information that someone asks of you. Just like a guard at a castle 'gate-keeps' the castle (the info), you are guarding the info.",
     "examples": [
       "I’m gatekeeping."
-    ]
+    ],
+   "image": "/public/images/gatekeeping.png"
 },
 {
     "term": "Hawk Tuah",
     "definition": "A phrase said by Hailey Welch in a street interview, referring to the sound she made when she spat. It can be considered a sound effect and is often made fun of for its ridiculousness.",
     "examples": [
       "Hawk Tuah Spit on that thang."
-    ]
+    ],
+    "image": "/public/images/hawktuah.png"
 },
 {
     "term": "Ipad Kid",
     "definition": "Used to describe a type of behavior similar to that of young children who excessively use iPads. This includes drooling, messy eating, and using iPads/phones during social gatherings instead of socializing. Note that a teenager using their phone at a social gathering is not in itself 'Ipad Kid' behavior; it preludes to the childish behavior associated with usage.",
     "examples": [
-      "Stop being such an Ipad kid!"
-    ]
+      "Stop being such an Ipad kid! (person plays on iPad during a meal)"
+    ],
+    "image": "/public/images/ipadkid.png"
 },
 {
     "term": "Impostor",
@@ -162,26 +178,30 @@
     "examples": [
       "Dude, you’re an impostor right now.",
       "You're kind of like an impostor right now. That’s kinda sus."
-    ]
+    ],
+    "image": "/public/images/imposter.png"
 },
 {
     "term": "Lock In",
     "definition": "To switch from a slacking attitude to intensely focused.",
     "examples": [
       "I need to lock in and finish my homework."
-    ]
+    ],
+    "image": "/public/images/lockin.png"
 },
 {
     "term": "Mewing",
     "definition": "Mewing is a form of oral posture training purported to improve jaw and facial structure. It involves positioning your tongue towards the roof of your mouth to improve jaw sharpness and create a jawline.",
-    "examples": []
+    "examples": [],
+    "image": "/public/images/mewing.png"
 },
 {
     "term": "Mogging",
     "definition": "Means to prove dominance over someone by showing off your superior physical appearance. This is mainly done by bringing your finger across your jawline to show it off, usually while mewing.",
     "examples": [
       "I’m mogging you."
-    ]
+    ],
+    "image": "/public/images/mog.png"
 },
 {
     "term": "'___'-maxing",
@@ -198,7 +218,8 @@
     "definition": "A term to describe something weird or bizarre. It can also be used as a negative attribute.",
     "examples": [
       "Skibidi Ohio rizz, which is an insult meaning a weird person who doesn’t have the ability to flirt."
-    ]
+    ],
+    "image": "/public/images/ohio.png"
 },
 {
     "term": "Oi oi oi",
@@ -212,12 +233,14 @@
     "definition": "An expression of approval, satisfaction, or excitement.",
     "examples": [
       "Friend 1: Yeah, I got 100% on this test. Friend 2: PURRRR."
-    ]
+    ],
+    "image": "/public/images/purr.png"
 },
 {
     "term": "Preach",
     "definition": "Used to express strong agreement with someone, especially when they’re speaking truth or voicing an opinion that resonates.",
-    "examples": []
+    "examples": [],
+    "image": "/public/images/preach.png"
 },
 {
     "term": "Quandale Dingle",
@@ -229,7 +252,8 @@
     "definition": "A term that a woman will use to call other women.",
     "examples": [
       "Hey queen, how are you?"
-    ]
+    ],
+    "image": "/public/images/queen.png"
 },
 {
     "term": "Rizz",
@@ -238,7 +262,8 @@
       "It’s often used to describe a person's smoothness or skill in flirting and making someone interested in them.",
       "A “rizzler” is someone who is a master at using rizz and has large amounts of rizz."
     ],
-    "examples": []
+    "examples": [],
+    "image": "/public/images/rizz.png"
 },
 {
     "term": "Sigma",
@@ -247,12 +272,14 @@
       "When someone has 'sigma brainrot,' it usually means they are overly absorbed in the idea of this archetype, either humorously adopting the mindset or constantly referencing sigma behaviors in exaggerated ways.",
       "It can imply that the person is spending too much time thinking about or idolizing the sigma male lifestyle, often in a self-deprecating or ironic manner."
     ],
-    "examples": []
+    "examples": [],
+    "image": "/public/images/sigma.png"
 },
 {
     "term": "Skibidi Toilet",
     "definition": "A popular internet meme involving a humorous take on toilets and their animated interactions.",
-    "examples": []
+    "examples": [],
+    "image": "/public/images/skibbidi_toilet.png"
 },
 {
     "term": "Sis",
@@ -272,10 +299,10 @@
 {
     "term": "Tea",
     "definition": [
-      "Body tea. Have a good figure. Example: Her body is tea.",
+      "Body tea. Have a good figure.",
       "Gossip and exciting information."
     ],
-    "examples": ["Spill the tea!"]
+    "examples": ["Spill the tea!", "Her body is tea"],
 },
 {
     "term": "Type Shit",
@@ -312,7 +339,8 @@
     "definition": "A term used humorously to describe making someone or something dramatically more fabulous or glamorous, often through exaggerated makeup or style changes.",
     "examples": [
       "My sister yassified me before I went out."
-    ]
+    ],
+    "image": "/public/images/yassify.png"
 },
 {
     "term": "You Are My Sunshine",

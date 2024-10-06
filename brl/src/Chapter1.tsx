@@ -53,9 +53,9 @@ const Chapter1: React.FC = () => {
     <div className="flashcard-container">
       <h1>Flashcards</h1>
       {selectedFlashcards.length > 0 && (
-        <Flashcard 
-          term={selectedFlashcards[currentIndex].term} 
-          definition={selectedFlashcards[currentIndex].definition} 
+        <Flashcard
+          term={selectedFlashcards[currentIndex].term}
+          definition={selectedFlashcards[currentIndex].definition}
         />
       )}
       <button onClick={handleNext}>Next Flashcard</button>
