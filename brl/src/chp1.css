@@ -1,0 +1,39 @@
+.flashcard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .flashcard {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .flashcard-question {
+    font-size: 1.5em;
+  }
+  
+  .flashcard-answer {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #eee;
+  }
+  

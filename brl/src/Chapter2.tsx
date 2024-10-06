@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Chapter2: React.FC = () => {
     return <div>Chapter 2</div>;
   };
