@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import DropdownButton from './DropdownButton.tsx';
 
 const Dictionary: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +12,6 @@ const Dictionary: React.FC = () => {
 
     const buttonPlacement: React.CSSProperties = {
         display: "flex",
-        //justifyContent: "center",
         alignItems: "center", 
         flexDirection: "column",
         height: '100vh',
@@ -54,13 +55,13 @@ const Dictionary: React.FC = () => {
                 {/* Navigation links in the center */}
                 <ul>
                     <li>
-                    <Link to="/" activeClassName="active">Home</Link>
+                    <NavLink to="/" activeClassName="active">Home</NavLink>
                     </li>
                     <li>
-                    <Link to="/learn" activeClassName="active">Learn</Link>
+                    <NavLink to="/learn" activeClassName="active">Learn</NavLink>
                     </li>
                     <li>
-                    <Link to="/dictionary" activeClassName="active">Dictionary</Link>
+                    <NavLink to="/dictionary" activeClassName="active">Dictionary</NavLink>
                     </li>
                 </ul>
             </nav>
@@ -70,22 +71,48 @@ const Dictionary: React.FC = () => {
 
         <div className="dropdown" style={bgStyle}>
             <div style={buttonPlacement}>
-            <button 
-                className="dropdown-button" 
-                onClick={onClick} 
-                style={buttonStyle}
-        >       {/* Text inside the button */}
-                A - names... 
-            </button>
-        {isOpen && (
-            <div className="dropdown-content">
-            <h3>Dropdown Content</h3>
-            <p>This dropdown appears on button click.</p>
-            <p>More information can be added here.</p>
-            </div>
-        )}
-        </div>
+                {/* First Dropdown Button */}
+      <DropdownButton
+        buttonText="Button 1"
+        dropdownContent={
+          <div>
+            <p>Dropdown content for Button 1</p>
+            <p>More details...</p>
+          </div>
+        }
+      />
+
+      {/* Second Dropdown Button */}
+      <DropdownButton
+        buttonText="Button 2"
+        dropdownContent={
+          <div>
+            <p>Dropdown content for Button 2</p>
+            <p>Additional info here...</p>
+          </div>
+        }
+      />
+
+      {/* Third Dropdown Button */}
+      <DropdownButton
+        buttonText="Button 3"
+        dropdownContent={
+          <div>
+            <p>Dropdown content for Button 3</p>
+            <p>Extra information goes here...</p>
+          </div>
+        }
+        
+        />
+
+      {/* Add more DropdownButtons as needed */}
     </div>
+
+        </div>
+        <footer className="footer">
+          <p>© 2024 BrainRot Lingo. All rights reserved.</p>
+        </footer>
+    {/*</></div>*/}
     </>
     );
   };
