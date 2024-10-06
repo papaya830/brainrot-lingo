@@ -2,35 +2,27 @@ import { Link, NavLink } from "react-router-dom";
 import React from 'react';
 
 const Chapter3: React.FC = () => {
-    return (
-        <div>
+    return <div>
             <header>
-                <nav>
-                    <Link to="/">
-                        <img src="/images/new-logo.png" alt="Logo" className="logo-img" />
-                    </Link>
+              <nav>
+                  <Link to="/">
+                       <img src="/images/new-logo.png" alt="Logo" className="logo-img" />
+                  </Link>
+                  
+                  <ul>
+                      <li>
+                      <NavLink to="/" activeClassName="active">Home</NavLink>
+                      </li>
+                      <li>
+                      <NavLink to="/learn" activeClassName="active">Learn</NavLink>
+                      </li>
+                      <li>
+                      <NavLink to="/dictionary" activeClassName="active">Dictionary</NavLink>
+                      </li>
+                  </ul>
+              </nav>
+          </header>
+    </div>;
+  };
 
-                    <ul>
-                        <li>
-                            <NavLink to="/" activeClassName="active">Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/learn" activeClassName="active">Learn</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/dictionary" activeClassName="active">Dictionary</NavLink>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-
-            {/* Input Text Box */}
-            <div>
-                <label htmlFor="inputBox">Enter Text:</label>
-                <input type="text" id="inputBox" placeholder="Type something..." />
-            </div>
-        </div>
-    );
-};
-
-export default Chapter3;
+  export default Chapter3;
