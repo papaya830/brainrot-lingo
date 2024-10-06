@@ -8,7 +8,7 @@
 },
 {
     "term": "Aura",
-    "definition": "Aura is the impression you give people. It's reputation, the sensation people have when you walk by. Some individuals have a noticeable aura, and others are taken for granted.",
+    "definition": "The impression you give people. It's reputation, the sensation people have when you walk by. Some individuals have a noticeable amount of this, and others are taken for granted.",
     "examples": [
       "This guy got 100 on the math test, he got aura.",
       "+1000 aura"
@@ -54,12 +54,12 @@
 {
     "term": "Cooked",
     "definition": [
-      "'Let him cook' implies someone is in the process of succeeding or showing potential.",
-      "'He’s cooked' means he is done or in trouble.",
-      "'I’m cooked' means you are in trouble.",
-      "'He cooked' means he did very well."
+      "Implies someone is in the process of succeeding or showing potential."
     ],
     "examples": [
+      "'He’s cooked' means he is done or in trouble.",
+      "'I’m cooked' means you are in trouble.",
+      "'He cooked' means he did very well.",
       "Let him cook. (let him do some cool stuff)",
       "He’s cooked. (negative)",
       "I’m cooked. (negative)",
@@ -74,7 +74,7 @@
 },
 {
     "term": "Cap",
-    "definition": "Cap means a lie.",
+    "definition": "Saying something is a lie, untrue, or inaccurate.",
     "examples": [
       "That’s cap."
     ],
@@ -109,7 +109,7 @@
 {
     "term": "Fanum Tax",
     "definition": [
-      "When you take a portion of someone else's food (like the IRS with real money). This term comes from the Twitch streamer Fanum, who routinely takes part of the food his roommate and fellow streamer Kai Cenat order for takeout.",
+      "When you take a portion of someone else's food (like the IRS with real money). This term comes from a Twitch streamer, who routinely takes part of the food his roommate and fellow streamer Kai Cenat order for takeout.",
       "Synonym: Father Tax when they take food from their children."
     ],
     "examples": [],
@@ -124,7 +124,7 @@
     "term": "Freak",
     "definition": [
       "Obscure sexual interests.",
-      "You are into unusual things."
+      "Someone who is into unusual things."
     ],
     "examples": [],
     "image": "/public/images/freak.png"
@@ -147,7 +147,7 @@
 },
 {
     "term": "Gatekeeping",
-    "definition": "Withholding information that someone asks of you. Just like a guard at a castle 'gate-keeps' the castle (the info), you are guarding the info.",
+    "definition": "Withholding information that someone asks of you. Can be used in a teasing or serious manner.",
     "examples": [
       "I’m gatekeeping."
     ],
@@ -163,7 +163,7 @@
 },
 {
     "term": "Ipad Kid",
-    "definition": "Used to describe a type of behavior similar to that of young children who excessively use iPads. This includes drooling, messy eating, and using iPads/phones during social gatherings instead of socializing. Note that a teenager using their phone at a social gathering is not in itself 'Ipad Kid' behavior; it preludes to the childish behavior associated with usage.",
+    "definition": "Used to describe a type of behavior similar to that of young children who excessively use this device. This includes drooling, messy eating, and purposely using electronic devices during social gatherings instead of socializing.",
     "examples": [
       "Stop being such an Ipad kid! (person plays on iPad during a meal)"
     ],
@@ -172,7 +172,7 @@
 {
     "term": "Impostor",
     "definition": [
-      "A term coined during the period when 'Among Us,' a game where you survive with alien shipmates who attempt to kill the crew, went viral. The term 'Impostor' refers to these aliens.",
+      "A term coined during the period when 'Among Us,' a game where you survive with alien shipmates who attempt to kill the crew, went viral. This term refers to these aliens.",
       "In a social context, it means that something is 'out-of-place' or does not belong. This term can be used in explicit senses."
     ],
     "examples": [
@@ -191,7 +191,7 @@
 },
 {
     "term": "Mewing",
-    "definition": "Mewing is a form of oral posture training purported to improve jaw and facial structure. It involves positioning your tongue towards the roof of your mouth to improve jaw sharpness and create a jawline.",
+    "definition": "A form of oral posture training purported to improve jaw and facial structure. It involves positioning your tongue towards the roof of your mouth to improve jaw sharpness and create a jawline.",
     "examples": [],
     "image": "/public/images/mewing.png"
 },
@@ -205,12 +205,14 @@
 },
 {
     "term": "'___'-maxing",
-    "definition": "To maximize the use of something or to focus on the improvement of something. For example, looks-maxing is focusing on the improvement of your looks, specifically your facial features.",
-    "examples": []
+    "definition": "To maximize the use of something or to focus on the improvement of something.",
+    "examples": [
+      "For example, looks-maxing is focusing on the improvement of your looks, specifically your facial features."
+    ]
 },
 {
     "term": "Non-chalant Dreadhead",
-    "definition": "Refers to someone who is super chill, relaxed, laid back, and cool while being a dreadhead.",
+    "definition": "Refers to someone who is super chill, relaxed, laid back, and cool.",
     "examples": []
 },
 {
@@ -258,18 +260,19 @@
 {
     "term": "Rizz",
     "definition": [
-      "\"Rizz\" is a slang term derived from \"charisma\" that refers to someone's ability to attract or charm others, particularly in romantic or flirty situations.",
-      "It’s often used to describe a person's smoothness or skill in flirting and making someone interested in them.",
+      "A slang term derived from \"charisma\" that refers to someone's ability to attract or charm others, particularly in romantic or flirty situations.",
+      "It’s often used to describe a person's smoothness or skill in flirting and making someone interested in them."
+    ],
+    "examples": [
       "A “rizzler” is someone who is a master at using rizz and has large amounts of rizz."
     ],
-    "examples": [],
     "image": "/public/images/rizz.png"
 },
 {
     "term": "Sigma",
     "definition": [
-      "The sigma male is often described as a lone wolf, someone who is independent, mysterious, and self-reliant, not conforming to traditional social hierarchies (like the alpha or beta male).",
-      "When someone has 'sigma brainrot,' it usually means they are overly absorbed in the idea of this archetype, either humorously adopting the mindset or constantly referencing sigma behaviors in exaggerated ways.",
+      "Often described as a lone wolf. This is someone who is independent, mysterious, and self-reliant, not conforming to traditional social hierarchies (like the alpha or beta male).",
+      "When someone has '___ brainrot,' it usually means they are overly absorbed in the idea of this archetype, either humorously adopting the mindset or constantly referencing sigma behaviors in exaggerated ways.",
       "It can imply that the person is spending too much time thinking about or idolizing the sigma male lifestyle, often in a self-deprecating or ironic manner."
     ],
     "examples": [],
@@ -299,7 +302,7 @@
 {
     "term": "Tea",
     "definition": [
-      "Body tea. Have a good figure.",
+      "Having a good figure.",
       "Gossip and exciting information."
     ],
     "examples": ["Spill the tea!", "Her body is tea"]
@@ -321,7 +324,7 @@
 },
 {
     "term": "Unc",
-    "definition": "Short for the term uncle. Usually used to refer to someone who is older than you as a way to poke fun at them. (They are usually barely older than you, less than 5 years older.)",
+    "definition": "Usually used to refer to someone who is older than you as a way to poke fun at them. (They are usually barely older than you, less than 5 years older.)",
     "examples": [
       "Ok Unc."
     ]
