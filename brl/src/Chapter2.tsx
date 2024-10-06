@@ -380,6 +380,9 @@ const Chapter2: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [showVideo, setShowVideo] = useState(false);
 
+  const videoRef2 = useRef<HTMLVideoElement | null>(null);
+  const [showVideo2, setShowVideo2] = useState(false);
+
   const numQuestions = 5;
 
   // Function to restart the game
@@ -392,6 +395,7 @@ const Chapter2: React.FC = () => {
     setIncorrectCount(0);
     setGameOverMessage(null);
     setShowVideo(false);
+    setShowVideo2(false);
 
     const shuffledData = shuffleArray(brainrotData).slice(0, numQuestions);
     setRandomData(shuffledData);
@@ -419,8 +423,10 @@ const Chapter2: React.FC = () => {
         setShowVideo(true); // Show video only if there are no incorrect answers
       } else if (incorrectCount >= numQuestions) {
         setGameOverMessage(`Game over! You got ${incorrectCount} wrong answers. You answered wrong more than you answered right. -10000000 aura`);
+        setShowVideo2(true);
       } else {
         setGameOverMessage(`Game over! You got ${incorrectCount} wrong answers. You put more right answers than wrong ones. No aura change`);
+        setShowVideo(true);
       }
 
       // Play the video if the condition is met
@@ -507,10 +513,18 @@ const Chapter2: React.FC = () => {
         {gameOverMessage && <div className="game-over">{gameOverMessage}</div>}
 
         {/* Show video only if there are no incorrect answers */}
-        {showVideo && incorrectCount === 0 && (
+        {showVideo && incorrectCount < numQuestions && (
           <div className="video-container">
             <video ref={videoRef} width="600" height="400" controls autoPlay>
               <source src="/videos/happy_happy_cat.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        )}
+        {showVideo2 && incorrectCount > numQuestions && (
+          <div className="video-container">
+            <video ref={videoRef2} width="600" height="400" controls autoPlay>
+              <source src="/videos/sad_meow.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
