@@ -274,9 +274,9 @@ const allFlashcards = [
   {
       "term": "Sigma",
       "definition": [
-        "Often described as a lone wolf. This is someone who is independent, mysterious, and self-reliant, not conforming to traditional social hierarchies (like the alpha or beta male).",
-        "When someone has '___ brainrot,' it usually means they are overly absorbed in the idea of this archetype, either humorously adopting the mindset or constantly referencing sigma behaviors in exaggerated ways.",
-        "It can imply that the person is spending too much time thinking about or idolizing the sigma male lifestyle, often in a self-deprecating or ironic manner."
+          "Often seen as a lone wolf, a sigma male is independent, mysterious, and self-reliant, rejecting traditional social hierarchies. ",
+          "Having '___ brainrot' means someone is humorously obsessed with this archetype, exaggerating sigma behaviors.",
+           "It suggests they're overly focused on or idolizing the sigma lifestyle, often in a self-deprecating or ironic way."
         ],
       "examples": [],
       "image": "/public/images/sigma.png"

@@ -25,7 +25,7 @@ const Flashcard: React.FC<FlashcardProps> = ({ term, definition, image }) => {
           <p>{definition}</p>
           {image && (
             <div className="hover-image-container">
-              <img src={image} alt={term} className="hover-image" />
+                <img src={image} alt={term} className="flashcard-image" />
             </div>
           )}
         </div>

@@ -47,6 +47,7 @@
 .flashcard-back {
   background-color: #ffffff; /* Back side style */
   transform: rotateY(180deg); /* Rotate the back */
+  align-items: center;
 }
 
 .flashcard-question {
@@ -83,6 +84,7 @@ button:hover {
   display: block; /* Ensures images are block elements */
   margin-left: auto; /* Center the image */
   margin-right: auto; /* Center the image */
+  align-self: flex-start;
 }
 
 
