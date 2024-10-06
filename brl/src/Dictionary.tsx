@@ -1,13 +1,25 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import DropdownButton from './DropdownButton.tsx';
 import data from '../public/termDictionary.json'; // Import your JSON file
-import "./Dictionary.css"
-import "./App.css"
+import "./Dictionary.css";
+import "./App.css";
 
 const Dictionary: React.FC = () => {
+    const [searchTerm, setSearchTerm] = useState("");
 
+    // Handle search input change
+    const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchTerm(event.target.value);
+    };
+
+    // Scroll to term function
+    const scrollToTerm = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
     return (
         <>
@@ -33,19 +45,33 @@ const Dictionary: React.FC = () => {
                     </nav>
                 </header>
 
+                {/* Search Bar */}
+                <div className="search-bar">
+                    <input
+                        type="text"
+                        placeholder="Search for a term..."
+                        value={searchTerm}
+                        onChange={handleSearchChange}
+                    />
+                </div>
+
                 <div className="button-placement">
                     {/* Dynamically Generate Dropdown Buttons from JSON */}
-                    {data.map((item, index) => (
-                        <DropdownButton
-                            key={index}
-                            buttonText={item.term}
-                            dropdownContent={
-                                <div>
-                                    <p><strong>Definition:</strong> {item.definition}</p>
-                                    <p><strong>Example:</strong> {item.examples}</p>
-                                </div>
-                            }
-                        />
+                    {data.filter(item =>
+                        item.term.toLowerCase().includes(searchTerm.toLowerCase()) // Filter based on search term
+                    ).map((item, index) => (
+                        <div key={index} id={item.term.replace(/\s+/g, '-').toLowerCase()}> {/* Create an ID for scrolling */}
+                            <DropdownButton
+                                buttonText={item.term}
+                                dropdownContent={
+                                    <div>
+                                        <p><strong>Definition:</strong> {item.definition}</p>
+                                        <p><strong>Example:</strong> {item.examples}</p>
+                                    </div>
+                                }
+                                onClick={() => scrollToTerm(item.term.replace(/\s+/g, '-').toLowerCase())} // Scroll to term on click
+                            />
+                        </div>
                     ))}
                 </div>
 
@@ -55,7 +81,6 @@ const Dictionary: React.FC = () => {
             </div>
         </>
     );
+};
 
-  };
-
-  export default Dictionary;
+export default Dictionary;
