@@ -1,11 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import { Dictionary } from "./Dictionary";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Dictionary from "./Dictionary";
+import Learn from "./Learn"; // Import the Learn component
 
 const router = createBrowserRouter([
   {
@@ -13,20 +11,17 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/Dictionary",
-    element: <Dictionary/>
-  }
+    path: "/dictionary",
+    element: <Dictionary />,
+  },
+  {
+    path: "/learn", // Add a route for Learn
+    element: <Learn />,
+  },
 ]);
-// import { ConvexProvider, ConvexReactClient } from "convex/react";
-
-// const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-
-    {/*  <ConvexProvider client={convex}> */}
-
-    {/* </ConvexProvider> */}
-  </React.StrictMode>,
+  </React.StrictMode>
 );
