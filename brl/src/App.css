@@ -42,7 +42,7 @@
 /* Overlay Image */
 .overlay-image {
   position: absolute; /* Positioning to overlap */
-  top: 15%; /* Adjust as needed */
+  top: 18%; /* Adjust as needed */
   right: 2%; /* Adjust as needed */
   width: 30%; /* Adjust the width as necessary */
   z-index: 10; /* Ensure it appears above the background */
@@ -185,4 +185,33 @@ h2 {
 
 .transition-t2 {
   animation-delay: 0.65s; /* Delay for h2, can adjust this if needed */
+}
+
+.description-blob {
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+  padding: 15px; /* Space inside the blob */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  max-width: 800px; /* Limit width for better readability */
+  margin: 40px auto; /* Center horizontally with space above and below */
+  text-align: center; /* Center align text */
+}
+
+.description-blob p {
+  font-size: 1.1rem; /* Font size for paragraph */
+  color: #333; /* Dark gray text color */
+  line-height: 1.6; /* Spacing between lines for readability */
+  margin: 0; /* Remove default margin */
+  font-family: 'Roboto', 'Open Sans', 'Raleway', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .description-blob {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .description-blob p {
+    font-size: 1rem; /* Smaller font size on mobile */
+  }
 }
