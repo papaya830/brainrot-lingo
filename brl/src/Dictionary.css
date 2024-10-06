@@ -1,0 +1,68 @@
+/* Styling for the button */
+.dropdown-button {
+    padding: 10px 20px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 1000px;
+    height: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    text-align: left;
+    font-weight: bold;
+    background-color: #0196be;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    border: none;
+    transition: background-color 1.0s ease, box-shadow 1.0s ease, transform 1.0s ease;
+  }
+
+  .dropdown-button:hover {
+    color: #ffd700; /* Change to a darker shade or a different color */
+    /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9); /* Make the shadow more pronounced */
+    background-color: #0196be;
+    transform: scale(1.03);
+    
+  }
+
+  .dropdown-button:hover .dropdown-content {
+    transition: opacity 1.0s ease; /* Smooth transition for opacity */
+    opacity: 1; /* Make content fully visible on hover */
+    /*visibility: visible; /* Ensure content is visible */
+}
+
+  .dropdown-content:hover {
+    color: #ffd700; /* Change to a darker shade or a different color */
+    /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9); /* Make the shadow more pronounced */
+    background-color: #0196be;
+    
+  }
+  
+  /* Styling for the dropdown content */
+  .dropdown-content {
+    padding: 10px 20px;
+    background-color: #00a994;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #ffffff;
+    max-height: 0; /* Collapsed by default */
+    width: 1000px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+   
+    opacity: 0; /* Start with content invisible */
+
+  }
+  
+  /* When dropdown is open */
+  .dropdown-content.open {
+    max-height: 500px;
+    transition: opacity 2.0s ease, max-height 3.0s ease; /* Smooth transition for opacity */
+    opacity: 1;
+  }
+  
+  .dropdown-content.closed {
+    max-height: 0;
+  }
+  

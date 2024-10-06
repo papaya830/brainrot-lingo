@@ -16,13 +16,9 @@ const Dictionary: React.FC = () => {
         paddingTop: '100px',
     };
 
-    const bgStyle = {
+    const bgStyle: React.CSSProperties = {
         flex: 1,
-        backgroundImage: 'url("images/jh.jpg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100vh',
-        width: '100%',
+        backgroundColor: "#ddc644"
     };
 
     return (
