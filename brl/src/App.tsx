@@ -8,6 +8,11 @@ const App: React.FC = () => {
     <div className="background-image">
       <header>
         <nav>
+          {/* Logo on the left */}
+          <Link to="/">
+            <img src="/images/default-logo.png" alt="Logo" className="logo-img" />
+          </Link>
+          {/* Navigation links in the center */}
           <ul>
             <li>
               <Link to="/" activeClassName="active">Home</Link>

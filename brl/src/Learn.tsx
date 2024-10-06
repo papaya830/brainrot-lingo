@@ -13,7 +13,26 @@ const Learn: React.FC = () => {
         <div style={bgStyle}>
             <header>
                 <nav>
+                    {/* Logo on the left */}
+                    <Link to="/">
+                        <img src="/images/default-logo.png" alt="Logo" className="logo-img" />
+                    </Link>
+                    {/* Navigation links in the center */}
                     <ul>
+                        <li>
+                        <Link to="/" activeClassName="active">Home</Link>
+                        </li>
+                        <li>
+                        <Link to="/learn" activeClassName="active">Learn</Link>
+                        </li>
+                        <li>
+                        <Link to="/dictionary" activeClassName="active">Dictionary</Link>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+                    <ul>
+
                         <li>
                             <Link to="chapter1">Chapter 1</Link>
                         </li>
@@ -24,8 +43,6 @@ const Learn: React.FC = () => {
                             <Link to="chapter3">Chapter 3</Link>
                         </li>
                     </ul>
-                </nav>
-            </header>
             {/* This Outlet will render the content of the selected chapter */}
             <Outlet />
         </div>

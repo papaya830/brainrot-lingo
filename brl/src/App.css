@@ -7,6 +7,16 @@
   box-sizing: border-box;
 }
 
+/* Logo Styling */
+.logo-img {
+  width: 50px; /* Adjust the logo size */
+  height: auto; /* Maintain aspect ratio */
+  vertical-align: middle; /* Align the logo with nav items */
+  display: flex; /* Flexbox to align vertically */
+  align-items: center; /* Center vertically */
+}
+
+/* Background Image */
 .background-image {
   background-image: url("images/jh.jpg"); /* Path to your image */
   background-size: cover; /* Cover the entire background */
@@ -16,6 +26,7 @@
   position: relative; /* Position relative for absolute positioning */
 }
 
+/* Overlay Image */
 .overlay-image {
   position: absolute; /* Positioning to overlap */
   top: 15%; /* Adjust as needed */
@@ -48,15 +59,23 @@ body {
 /* Header and Navbar Styles */
 header {
   background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background for visibility */
-  padding: 2rem; /* Padding around the header */
-  position: relative; /* Ensure positioning context for z-index */
+  padding: 1rem 2rem; /* Padding around the header */
+  display: flex; /* Flexbox for header */
+  align-items: center; /* Center items vertically */
   z-index: 10; /* Make sure the header is above the background */
+}
+
+/* Nav Styling */
+nav {
+  flex-grow: 1; /* Allow the nav to take up remaining space */
 }
 
 nav ul {
   list-style-type: none; /* Remove bullets */
   display: flex; /* Flexbox for horizontal alignment */
   justify-content: center; /* Center the navigation items */
+  align-items: center; /* Align items vertically */
+  height: 100%; /* Full height for centering */
 }
 
 nav li {
@@ -68,6 +87,9 @@ nav a {
   text-decoration: none; /* Remove underline from links */
   font-size: 1.5rem; /* Slightly larger text */
   transition: color 0.3s ease; /* Smooth color transition */
+  display: flex; /* Flexbox to align vertically */
+  align-items: center; /* Center vertically */
+  height: 50px; /* Set a fixed height for nav links to match logo height */
 }
 
 nav a:hover {
