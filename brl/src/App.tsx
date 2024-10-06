@@ -38,6 +38,9 @@ const App: React.FC = () => {
             className="overlay-image"
         />
       </main>
+      <footer className="footer">
+          <p>© 2024 BrainRot Lingo. All rights reserved.</p>
+      </footer>
       </div>
     </>
   );

@@ -7,6 +7,17 @@
   box-sizing: border-box;
 }
 
+.footer {
+  background-color: black; /* Black background */
+  color: white; /* White text color */
+  text-align: center; /* Center align text */
+  padding: 2rem; /* Increased padding for a bigger footer */
+  position: relative; /* Ensure footer is positioned correctly */
+  bottom: 0; /* Stick to the bottom */
+  width: 100%; /* Full width */
+  font-size: 1.5rem; /* Increase font size for better visibility */
+}
+
 /* Logo Styling */
 .logo-img {
   width: 50px; /* Adjust the logo size */
@@ -21,6 +32,8 @@
   background-image: url("images/jh.jpg"); /* Path to your image */
   background-size: cover; /* Cover the entire background */
   background-position: center; /* Center the background */
+  background-repeat: no-repeat; /* Prevent tiling of the image */
+  background-attachment: fixed; /* Keep the background fixed when scrolling */
   height: 100vh; /* Full viewport height */
   width: 100%; /* Full width */
   position: relative; /* Position relative for absolute positioning */
