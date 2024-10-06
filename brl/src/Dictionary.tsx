@@ -24,19 +24,31 @@ const Dictionary: React.FC = () => {
         width: '100%',
     };
 
+    const buttonStyle: React.CSSProperties = {
+        padding: "10px 20px", // Padding for the button
+        backgroundImage: 'url("images/jh.jpg")', // Set the button's background image
+        backgroundSize: 'cover', // Make sure the image covers the button
+        backgroundPosition: 'center', // Center the image
+        borderRadius: "5px", // Rounded corners
+        cursor: "pointer", // Pointer cursor on hover
+        width: '1000px', // Width for the button
+        height: '50px', // Height for the button
+      };
+
     return <div className="dropdown" style={bgStyle}>
         <div style={buttonPlacement}>
         <button 
             className="dropdown-button" 
             onClick={onClick} 
-            style={{
-            padding: "10px 20px", // Padding for the button
-            backgroundColor: "#4CAF50", // Button background color
-            color: "white", // Text color
-            border: "none", // No border
-            borderRadius: "5px", // Rounded corners
-            cursor: "pointer", // Pointer cursor on hover
-            }}
+            // style={{
+            // padding: "10px 20px", // Padding for the button
+            // backgroundColor: "#00a994", // Button background color
+            // color: "white", // Text color
+            // border: "none", // No border
+            // borderRadius: "5px", // Rounded corners
+            // cursor: "pointer", // Pointer cursor on hover
+            // }}
+            style={buttonStyle}
         >
             A - names... {/* Text inside the button */}
         </button>
