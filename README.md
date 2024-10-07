@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-# brainrot-lingo
-Submission for stormhacks 2024 
-
-Category: Learning, Social Goodness. 
-
-# Creators: Andrew La Grange, Jason Soo, Chloe Yip, Noah Zakaib
-=======
 # BrainRot-Lingo
 Submission for Stormhacks 2024
 
@@ -46,9 +38,4 @@ If you do not already, also make sure you have ' openai ' installed. You can run
 
 To run:
     `cd brl` <br>
-     run `npm run dev` to start the program and follow the link displayed in ther terminal <br>
-
-To use translator: `cd brl` <br>
-    make a .emv file with your OPEN_AI_KEY, insert into .emv <br>
-    `VITE_OPENAI_API_KEY="Your_OPEN_AI_KEY"` <br>
-    Use instructions above to run it locally
+     run `npm run dev` to start the program and follow the link displayed in ther terminal
