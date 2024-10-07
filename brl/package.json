@@ -1,10 +1,13 @@
 {
+  "homepage": "http://papaya830.github.io/brainrot-lingo",
   "name": "brl",
   "private": true,
   "proxy": "http://localhost:5000",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run dev",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",

@@ -3,6 +3,7 @@
     "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "s": "^1.0.0"
   }
 }
