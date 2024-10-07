@@ -42,6 +42,6 @@ To run:
 
 To run Translator feature:`cd brl` <br> <br>
     *Notice!* will need an OpenAI key to use this feature <br> <br>
-    create a `.emv` file in this directory and insert the follwing in the file <br>
+    create a `.env` file in this directory and insert the follwing in the file <br>
     `VITE_OPENAI_API_KEY="Your_OPENAI_KEY"` <br>
     Use the instructions above to run the program to access the feature.
