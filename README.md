@@ -1,6 +1,3 @@
-Category: Learning, Social Goodness. 
-
-# Creators: Andrew La Grange, Jason Soo, Chloe Yip, Noah Zakaib
 # BrainRot-Lingo
 Submission for Stormhacks 2024
 
