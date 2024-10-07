@@ -2,15 +2,8 @@ import { Link, NavLink } from "react-router-dom";
 import "./App.css"
 
 const Learn: React.FC = () => {
-    const bgStyle = {
-        backgroundImage: 'url("images/jh.jpg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100vh',
-        width: '100%',
-    };
 return (
-        <div style={bgStyle}>
+        <div>
             <header>
                 <nav>
                     <Link to="/">
