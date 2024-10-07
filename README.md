@@ -37,11 +37,11 @@ Make sure you have **npm installed and running** in the `brl` directory.
 If you do not already, also make sure you have ' openai ' installed. You can run `pip install openai` if you do not. You also need to **install the react reactor dom**, which can be done with `install npm react-reactor-dom`. 
 
 To run:
-    `cd brl` <br>
+    `cd brl` <br> <br>
      run `npm run dev` to start the program and follow the link displayed in ther terminal <br>
 
-To run Translator feature:`cd brl` <br>
-    *Notice* will need an OpenAI key to use this feature <br>
+To run Translator feature:`cd brl` <br> <br>
+    *Notice* will need an OpenAI key to use this feature <br> <br>
     create a `.emv` file in this directory and insert the follwing in the file <br>
     `VITE_OPENAI_API_KEY="Your_OPENAI_KEY"` <br>
     Use the instructions above to run the program to access the feature.
