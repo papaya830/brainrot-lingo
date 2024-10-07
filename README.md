@@ -38,7 +38,7 @@ If you do not already, also make sure you have ' openai ' installed. You can run
 
 To run:
     `cd brl` <br> <br>
-     run `npm run dev` to start the program and follow the link displayed in ther terminal <br>
+     run `npm run dev` to start the program and follow the link displayed in ther terminal <br><br><br>
 
 To run Translator feature:`cd brl` <br> <br>
     *Notice* will need an OpenAI key to use this feature <br> <br>
