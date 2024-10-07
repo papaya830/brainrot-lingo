@@ -29,7 +29,7 @@ const App: React.FC = () => {
         <main>
           {/* The content of the main app is rendered here. */}
           <div>
-            <h1 className="transition-t1">BrainRot Lingo</h1>
+            <h1 className="transition-t1" style={{ color: "white" }}>BrainRot Lingo</h1>
             <h2 className="transition-t2">Stay Trendy, Stay Connected!</h2>
             <div className="description-blob">
               <p>

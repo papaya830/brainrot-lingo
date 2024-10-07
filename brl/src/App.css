@@ -144,6 +144,8 @@ main {
 /* Heading Styles */
 h1 {
   font-size: 5rem;
+  font-style: italic;
+  font-weight: bold;
   margin: 20px 0;
   opacity: 0;
   animation: fadeInRight 2.5s forwards;
