@@ -41,7 +41,7 @@ To run:
      run `npm run dev` to start the program and follow the link displayed in ther terminal <br><br><br>
 
 To run Translator feature:`cd brl` <br> <br>
-    *Notice* will need an OpenAI key to use this feature <br> <br>
+    *Notice!* will need an OpenAI key to use this feature <br> <br>
     create a `.emv` file in this directory and insert the follwing in the file <br>
     `VITE_OPENAI_API_KEY="Your_OPENAI_KEY"` <br>
     Use the instructions above to run the program to access the feature.
