@@ -38,4 +38,10 @@ If you do not already, also make sure you have ' openai ' installed. You can run
 
 To run:
     `cd brl` <br>
-     run `npm run dev` to start the program and follow the link displayed in ther terminal
+     run `npm run dev` to start the program and follow the link displayed in ther terminal <br>
+
+To run Translator feature:`cd brl` <br>
+    *Notice* will need an OpenAI key to use this feature <br>
+    create a `.emv` file in this directory and insert the follwing in the file <br>
+    `VITE_OPENAI_API_KEY="Your_OPENAI_KEY"` <br>
+    Use the instructions above to run the program to access the feature.
