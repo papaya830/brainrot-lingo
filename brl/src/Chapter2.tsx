@@ -530,6 +530,9 @@ const Chapter2: React.FC = () => {
           </div>
         )}
       </div>
+      <footer className="footer">
+        <p>© 2024 BrainRot Lingo. All rights reserved.</p>
+      </footer>
     </div>
   );
 };

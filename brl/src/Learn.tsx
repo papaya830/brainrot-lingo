@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import "./App.css"
 
 const Learn: React.FC = () => {
     const bgStyle = {
@@ -74,6 +75,10 @@ return (
                     </div>
                 </div>
             </div>
+
+            <footer className="footer">
+                <p>© 2024 BrainRot Lingo. All rights reserved.</p>
+            </footer>
         </div>
     );
 };

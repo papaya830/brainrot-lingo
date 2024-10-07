@@ -1,0 +1,95 @@
+/* Main container styling */
+.bg-style {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px; /* Adjusted for better spacing */
+}
+
+/* Styling for the header */
+header {
+    width: 100%;
+    background-color: #0196be; /* Header background */
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo-img {
+    width: 150px; /* Adjust logo size as needed */
+}
+
+/* Navigation styling */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center; /* Center nav items */
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px; /* Space between nav items */
+}
+
+nav a {
+    color: #ffffff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Font size for nav links */
+}
+
+nav a.active {
+    text-decoration: underline; /* Active link underline */
+}
+
+/* Styling for the main title */
+h1 {
+    color: black;
+    font-size: 36px; /* Title font size */
+    margin-bottom: 20px; /* Space below title */
+}
+
+/* Text area styling */
+textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding */
+    font-size: 20px; /* Font size */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin-bottom: 20px; /* Space below textarea */
+}
+
+/* Styling for the button */
+.button {
+    padding: 10px 20px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 300px; /* Adjusted width */
+    height: 60px; /* Adjusted height */
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px; /* Font size */
+    font-weight: bold;
+    background-color: #0196be;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.button:hover {
+    color: #ffd700; /* Change text color on hover */
+    background-color: #007f8c; /* Darker shade on hover */
+    transform: scale(1.03); /* Slightly enlarge on hover */
+}
+
+/* Styling for the translated message */
+h3 {
+    color: black; /* Translated message color */
+    font-size: 28px; /* Translated message font size */
+    margin-top: 20px; /* Space above translated message */
+}

@@ -23,7 +23,7 @@ const Dictionary: React.FC = () => {
 
     return (
         <>
-            <div className="bg-style">
+            <div>
                 <header>
                     <nav>
                         {/* Logo on the left */}

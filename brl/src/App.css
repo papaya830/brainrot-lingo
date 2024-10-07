@@ -1,19 +1,30 @@
 /* App.css */
 
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Ensure the html and body take the full height */
+html, body {
+  height: 100%; /* Full height */
+  margin: 0; /* Remove default margins */
 }
 
+/* Main wrapper to use flexbox */
+.wrapper {
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange children in a column */
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Main content area */
+.content {
+  flex: 1; /* Allow this area to grow and take available space */
+}
+
+/* Footer styling */
 .footer {
   background-color: black; /* Black background */
   color: white; /* White text color */
   text-align: center; /* Center align text */
   padding: 2rem; /* Increased padding for a bigger footer */
   position: relative; /* Ensure footer is positioned correctly */
-  bottom: 0; /* Stick to the bottom */
   width: 100%; /* Full width */
   font-size: 1.5rem; /* Increase font size for better visibility */
 }
