@@ -34,7 +34,7 @@ look up of terms, serving as a quick and efficient way to understand the Gen-Z s
 
 ### Pre-Requisites
 Make sure you have **npm installed and running** in the `brl` directory.
-If you do not already, also make sure you have ' openai ' installed. You can run `pip install openai` if you do not. You also need to **install the react reactor dom**, which can be done with `install npm react-reactor-dom`. 
+If you do not already, also make sure you have ' openai ' installed. You can run `pip install openai` if you do not. You also need to **install the react reactor dom**, which can be done with `install npm react-reactor-dom`. <br>
 
 To run:
     `cd brl` <br> <br>
