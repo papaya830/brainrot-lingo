@@ -16,13 +16,13 @@ look up of terms, serving as a quick and efficient way to understand the Gen-Z s
 
 ### Pre-Requisites
 Make sure you have **npm installed and running** in the `brl` directory.
-If you do not already, also make sure you have ' openai ' installed. You can run `pip install openai` if you do not. You also need to **install the react reactor dom**, which can be done with `install npm react-reactor-dom`. <br>
+If you do not already, also make sure you have **openai installed**. You can run `pip install openai` if you do not. You also need to **install the react reactor dom**, which can be done with `npm install react-reactor-dom`. <br>
 
 To run:
     `cd brl` <br> <br>
      run `npm run dev` to start the program and follow the link displayed in ther terminal <br><br>
 
 To use translator feature: `cd brl` <br> <br>
-    *Notice!* Only need to setup once and will need your own OpenAI key.<br> <br>
+    **Notice!** Only need to setup once and will need your own OpenAI API key.<br> <br>
     create a `.env` file in the brl directory and insert the follwing in the file <br>
-    `VITE_OPENAI_API_KEY="Your_OPENAI_KEY"` <br>
+    `VITE_OPENAI_API_KEY="Your_OPENAI_API_KEY"` <br>
